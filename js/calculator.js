@@ -707,13 +707,36 @@ function initMobileNav() {
 // =============================================================================
 
 function initFromPagePreset() {
+  const body = document.body.dataset;
+
   // Check for page-level material preset (set in HTML)
-  const pagePreset = document.body.dataset.material;
-  if (pagePreset && MATERIALS[pagePreset]) {
-    state.material = pagePreset;
-    state.subtype = MATERIALS[pagePreset].subtypes[0].id;
-    state.depth = MATERIALS[pagePreset].defaultDepth;
+  if (body.material && MATERIALS[body.material]) {
+    state.material = body.material;
+    state.subtype = MATERIALS[body.material].subtypes[0].id;
+    state.depth = MATERIALS[body.material].defaultDepth;
   }
+
+  // Check for subtype preset
+  if (body.subtype) {
+    const material = MATERIALS[state.material];
+    const subtypeExists = material.subtypes.some(s => s.id === body.subtype);
+    if (subtypeExists) {
+      state.subtype = body.subtype;
+    }
+  }
+
+  // Check for shape preset
+  if (body.shape && ['rectangle', 'circle', 'triangle'].includes(body.shape)) {
+    state.shape = body.shape;
+  }
+
+  // Check for dimension presets
+  if (body.length) state.length = body.length;
+  if (body.width) state.width = body.width;
+  if (body.radius) state.radius = body.radius;
+  if (body.base) state.base = body.base;
+  if (body.height) state.height = body.height;
+  if (body.depth) state.depth = body.depth;
 }
 
 // =============================================================================
@@ -727,13 +750,40 @@ function initCopyrightYear() {
   }
 }
 
+function hasPagePresets() {
+  const body = document.body.dataset;
+  return body.length || body.width || body.radius || body.base || body.height;
+}
+
+function applyPresetsToInputs() {
+  // Apply dimension values to input fields
+  if (elements.lengthInput && state.length) {
+    elements.lengthInput.value = state.length;
+  }
+  if (elements.widthInput && state.width) {
+    elements.widthInput.value = state.width;
+  }
+  if (elements.radiusInput && state.radius) {
+    elements.radiusInput.value = state.radius;
+  }
+  if (elements.baseInput && state.base) {
+    elements.baseInput.value = state.base;
+  }
+  if (elements.heightInput && state.height) {
+    elements.heightInput.value = state.height;
+  }
+  if (elements.depthInput && state.depth) {
+    elements.depthInput.value = state.depth;
+  }
+}
+
 function init() {
   initElements();
   initMobileNav();
   initFaqToggles();
   initCopyrightYear();
 
-  // Check for page preset first
+  // Check for page preset first (data attributes on body)
   initFromPagePreset();
 
   // Then check for URL params (overrides page preset)
@@ -744,9 +794,17 @@ function init() {
   updateShapeUI();
   updateDepthChips();
 
-  // Apply URL params if present
+  // Apply presets to input fields
+  applyPresetsToInputs();
+
+  // Apply URL params if present (overrides data attributes)
   if (hasShareParams) {
     applyParsedState();
+  } else if (hasPagePresets()) {
+    // Auto-calculate if page has pre-filled values
+    if (validateAllInputs()) {
+      handleCalculate();
+    }
   }
 
   // Bind events

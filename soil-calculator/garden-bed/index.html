@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Much Soil for a Garden Bed | LandscapeCalc</title>
+  <meta name="description" content="Calculate soil for a standard garden bed. For a 5m × 1.5m bed at 200mm depth, you'll need approximately 1.5 cubic metres. Free Australian calculator.">
+  <link rel="canonical" href="https://landscapecalc.com.au/soil-calculator/garden-bed/">
+
+  <meta property="og:title" content="How Much Soil for a Garden Bed | LandscapeCalc">
+  <meta property="og:description" content="Calculate soil for a standard garden bed. For a 5m × 1.5m bed at 200mm depth, you'll need approximately 1.5 cubic metres.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landscapecalc.com.au/soil-calculator/garden-bed/">
+  <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
+  <meta property="og:locale" content="en_AU">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2D5A3D">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://landscapecalc.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Soil Calculator", "item": "https://landscapecalc.com.au/soil-calculator/" },
+      { "@type": "ListItem", "position": 3, "name": "How Much Soil for a Garden Bed", "item": "https://landscapecalc.com.au/soil-calculator/garden-bed/" }
+    ]
+  }
+  </script>
+</head>
+<body data-material="soil" data-subtype="garden-mix" data-shape="rectangle" data-length="5" data-width="1.5" data-depth="200">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>
+        LandscapeCalc
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button type="button" class="header__mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/mulch-calculator/">Mulch Calculator</a>
+    <a href="/soil-calculator/">Soil Calculator</a>
+    <a href="/gravel-calculator/">Gravel Calculator</a>
+    <a href="/sand-calculator/">Sand Calculator</a>
+    <a href="/roadbase-calculator/">Road Base Calculator</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <main>
+    <nav class="breadcrumb"><div class="container"><ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+      <li class="breadcrumb__item"><a href="/soil-calculator/" class="breadcrumb__link">Soil Calculator</a></li>
+      <li class="breadcrumb__item"><span class="breadcrumb__current">Garden Bed</span></li>
+    </ol></div></nav>
+
+    <section class="page-header"><div class="container">
+      <h1>How Much Soil for a Garden Bed</h1>
+      <p>Calculate the soil needed for a standard garden bed along a fence or wall.</p>
+    </div></section>
+
+    <div class="calculator-wrapper">
+      <div class="calculator-card">
+        <div class="calculator-card__header">
+          <h2 class="calculator-card__title">Calculate Your Soil</h2>
+          <div class="material-tabs">
+            <button type="button" class="material-tab" data-material="mulch"><span class="material-dot material-dot--mulch"></span>Mulch</button>
+            <button type="button" class="material-tab is-active" data-material="soil"><span class="material-dot material-dot--soil"></span>Soil</button>
+            <button type="button" class="material-tab" data-material="gravel"><span class="material-dot material-dot--gravel"></span>Gravel</button>
+            <button type="button" class="material-tab" data-material="sand"><span class="material-dot material-dot--sand"></span>Sand</button>
+            <button type="button" class="material-tab" data-material="roadbase"><span class="material-dot material-dot--roadbase"></span>Road Base</button>
+          </div>
+        </div>
+        <div class="calculator-card__body">
+          <div class="shape-toggle">
+            <button type="button" class="shape-toggle__btn is-active" data-shape="rectangle">Rectangle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="circle">Circle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="triangle">Triangle</button>
+          </div>
+          <div id="rectangle-inputs"><div class="form-row">
+            <div class="form-group"><label class="form-label" for="length">Length (metres)</label><input type="number" id="length" class="form-input" placeholder="e.g. 5" min="0" step="0.01"><span class="form-error">Please enter a valid length</span></div>
+            <div class="form-group"><label class="form-label" for="width">Width (metres)</label><input type="number" id="width" class="form-input" placeholder="e.g. 1.5" min="0" step="0.01"><span class="form-error">Please enter a valid width</span></div>
+          </div></div>
+          <div id="circle-inputs" style="display: none;"><div class="form-group"><label class="form-label" for="radius">Radius (metres)</label><input type="number" id="radius" class="form-input" placeholder="e.g. 2" min="0" step="0.01"><span class="form-error">Please enter a valid radius</span></div></div>
+          <div id="triangle-inputs" style="display: none;"><div class="form-row">
+            <div class="form-group"><label class="form-label" for="base">Base (metres)</label><input type="number" id="base" class="form-input" placeholder="e.g. 4" min="0" step="0.01"><span class="form-error">Please enter a valid base</span></div>
+            <div class="form-group"><label class="form-label" for="height">Height (metres)</label><input type="number" id="height" class="form-input" placeholder="e.g. 3" min="0" step="0.01"><span class="form-error">Please enter a valid height</span></div>
+          </div></div>
+          <div class="form-group"><label class="form-label" for="subtype">Soil Type</label><select id="subtype" class="form-select"></select></div>
+          <div class="form-group">
+            <label class="form-label">Depth</label>
+            <div class="depth-presets">
+              <button type="button" class="depth-chip" data-depth="100">100mm</button>
+              <button type="button" class="depth-chip" data-depth="150">150mm</button>
+              <button type="button" class="depth-chip" data-depth="200">200mm</button>
+            </div>
+            <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1">
+            <span class="form-error">Please enter a valid depth</span>
+            <p class="form-hint" id="depth-hint">Recommended depth: 150-300mm for garden beds</p>
+          </div>
+          <div class="btn-group">
+            <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
+            <button type="button" id="reset-btn" class="btn btn--secondary">Reset</button>
+          </div>
+          <div id="result-card" class="result-card">
+            <div class="result-card__primary"><span class="result-card__value" id="result-volume">0.00</span><span class="result-card__unit">m³</span><p class="result-card__label">Total Volume</p></div>
+            <div class="result-card__secondary">
+              <div class="result-card__item"><div class="result-card__item-value" id="result-tonnes">0.00</div><div class="result-card__item-label">Tonnes</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20kg Bags</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">Bulka Bags</div></div>
+            </div>
+            <div class="result-card__actions">
+              <button type="button" id="copy-btn" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy Result</button>
+              <button type="button" id="share-btn" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>Share Link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section"><div class="container">
+      <h2>Soil for a Standard Garden Bed</h2>
+      <p>The classic garden bed along a fence or beside a house is one of the most common landscaping features in Australian homes. A typical bed of 5 metres long by 1.5 metres wide gives you 7.5 square metres of planting space. At 200mm depth, which provides adequate growing conditions for shrubs and perennials, you'll need approximately 1.5 cubic metres of garden mix soil to establish this bed properly.</p>
+
+      <p>One and a half cubic metres of garden mix weighs approximately 1.65 tonnes, making this a typical residential bulk delivery. This quantity sits at a good price point for most suppliers and is enough material to create a substantial garden bed from scratch. Buying this volume in bags would require roughly 75 trips with 20kg bags, making bulk delivery the only sensible option.</p>
+
+      <h3>Choosing Garden Mix Over Topsoil</h3>
+      <p>For ornamental garden beds, garden mix is generally a better choice than plain topsoil. Garden mix combines topsoil with composted organic matter, creating a growing medium that retains moisture better, drains more effectively, and contains more nutrients than topsoil alone. The added organic content also encourages beneficial soil life that helps plants establish and thrive. While garden mix costs more per cubic metre than basic topsoil, the improved plant performance usually justifies the investment.</p>
+
+      <h3>Building Up Your Bed Level</h3>
+      <p>When creating a new garden bed, you're often building up the level rather than excavating. Position your edging first, whether that's timber sleepers, steel garden edges, or natural stone. This contains the soil and creates a defined bed shape. Add soil in layers, watering lightly between each to help settle the material. Leave the final level slightly mounded, as fresh soil will compact over the first few months of watering and planting.</p>
+
+      <p>Planning a different bed size? Use our main <a href="/soil-calculator/">soil calculator</a> to enter your specific dimensions.</p>
+    </div></section>
+
+    <section class="related-section"><div class="container">
+      <h2 class="related-section__title">Related Calculations</h2>
+      <div class="related-grid">
+        <a href="/soil-calculator/raised-garden-bed/" class="material-card"><div class="material-card__icon material-card__icon--soil"></div><h3 class="material-card__title">Raised Garden Bed</h3><p class="material-card__desc">Raised bed filling</p></a>
+        <a href="/mulch-calculator/garden-bed/" class="material-card"><div class="material-card__icon material-card__icon--mulch"></div><h3 class="material-card__title">Mulch for Beds</h3><p class="material-card__desc">Top with mulch</p></a>
+        <a href="/soil-calculator/10-square-metres/" class="material-card"><div class="material-card__icon material-card__icon--soil"></div><h3 class="material-card__title">10 Square Metres</h3><p class="material-card__desc">Medium area coverage</p></a>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer__inner">
+    <a href="/" class="footer__logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>LandscapeCalc</a>
+    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
+    <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
+  </div></footer>
+  <script src="/js/calculator.js"></script>
+</body>
+</html>

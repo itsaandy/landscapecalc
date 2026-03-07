@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sand Under Pavers | LandscapeCalc</title>
+  <meta name="description" content="Calculate sand for under pavers. For a 5m × 5m paved area at 30mm depth, you'll need approximately 0.75 cubic metres of washed sand. Free Australian calculator.">
+  <link rel="canonical" href="https://landscapecalc.com.au/sand-calculator/under-pavers/">
+
+  <meta property="og:title" content="Sand Under Pavers | LandscapeCalc">
+  <meta property="og:description" content="Calculate sand for under pavers. For a 5m × 5m paved area at 30mm depth, you'll need approximately 0.75 cubic metres of washed sand.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landscapecalc.com.au/sand-calculator/under-pavers/">
+  <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
+  <meta property="og:locale" content="en_AU">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2D5A3D">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://landscapecalc.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Sand Calculator", "item": "https://landscapecalc.com.au/sand-calculator/" },
+      { "@type": "ListItem", "position": 3, "name": "Sand Under Pavers", "item": "https://landscapecalc.com.au/sand-calculator/under-pavers/" }
+    ]
+  }
+  </script>
+</head>
+<body data-material="sand" data-subtype="washed-sand" data-shape="rectangle" data-length="5" data-width="5" data-depth="30">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>
+        LandscapeCalc
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button type="button" class="header__mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/mulch-calculator/">Mulch Calculator</a>
+    <a href="/soil-calculator/">Soil Calculator</a>
+    <a href="/gravel-calculator/">Gravel Calculator</a>
+    <a href="/sand-calculator/">Sand Calculator</a>
+    <a href="/roadbase-calculator/">Road Base Calculator</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <main>
+    <nav class="breadcrumb"><div class="container"><ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+      <li class="breadcrumb__item"><a href="/sand-calculator/" class="breadcrumb__link">Sand Calculator</a></li>
+      <li class="breadcrumb__item"><span class="breadcrumb__current">Under Pavers</span></li>
+    </ol></div></nav>
+
+    <section class="page-header"><div class="container">
+      <h1>Sand Under Pavers</h1>
+      <p>Calculate the screed layer of sand needed for your paving project.</p>
+    </div></section>
+
+    <div class="calculator-wrapper">
+      <div class="calculator-card">
+        <div class="calculator-card__header">
+          <h2 class="calculator-card__title">Calculate Your Sand</h2>
+          <div class="material-tabs">
+            <button type="button" class="material-tab" data-material="mulch"><span class="material-dot material-dot--mulch"></span>Mulch</button>
+            <button type="button" class="material-tab" data-material="soil"><span class="material-dot material-dot--soil"></span>Soil</button>
+            <button type="button" class="material-tab" data-material="gravel"><span class="material-dot material-dot--gravel"></span>Gravel</button>
+            <button type="button" class="material-tab is-active" data-material="sand"><span class="material-dot material-dot--sand"></span>Sand</button>
+            <button type="button" class="material-tab" data-material="roadbase"><span class="material-dot material-dot--roadbase"></span>Road Base</button>
+          </div>
+        </div>
+        <div class="calculator-card__body">
+          <div class="shape-toggle">
+            <button type="button" class="shape-toggle__btn is-active" data-shape="rectangle">Rectangle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="circle">Circle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="triangle">Triangle</button>
+          </div>
+          <div id="rectangle-inputs"><div class="form-row">
+            <div class="form-group"><label class="form-label" for="length">Length (metres)</label><input type="number" id="length" class="form-input" placeholder="e.g. 5" min="0" step="0.01"><span class="form-error">Please enter a valid length</span></div>
+            <div class="form-group"><label class="form-label" for="width">Width (metres)</label><input type="number" id="width" class="form-input" placeholder="e.g. 5" min="0" step="0.01"><span class="form-error">Please enter a valid width</span></div>
+          </div></div>
+          <div id="circle-inputs" style="display: none;"><div class="form-group"><label class="form-label" for="radius">Radius (metres)</label><input type="number" id="radius" class="form-input" placeholder="e.g. 2" min="0" step="0.01"><span class="form-error">Please enter a valid radius</span></div></div>
+          <div id="triangle-inputs" style="display: none;"><div class="form-row">
+            <div class="form-group"><label class="form-label" for="base">Base (metres)</label><input type="number" id="base" class="form-input" placeholder="e.g. 4" min="0" step="0.01"><span class="form-error">Please enter a valid base</span></div>
+            <div class="form-group"><label class="form-label" for="height">Height (metres)</label><input type="number" id="height" class="form-input" placeholder="e.g. 3" min="0" step="0.01"><span class="form-error">Please enter a valid height</span></div>
+          </div></div>
+          <div class="form-group"><label class="form-label" for="subtype">Sand Type</label><select id="subtype" class="form-select"></select></div>
+          <div class="form-group">
+            <label class="form-label">Depth</label>
+            <div class="depth-presets">
+              <button type="button" class="depth-chip" data-depth="20">20mm</button>
+              <button type="button" class="depth-chip" data-depth="30">30mm</button>
+              <button type="button" class="depth-chip" data-depth="50">50mm</button>
+            </div>
+            <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1">
+            <span class="form-error">Please enter a valid depth</span>
+            <p class="form-hint" id="depth-hint">Recommended depth: 20-30mm for paver bedding</p>
+          </div>
+          <div class="btn-group">
+            <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
+            <button type="button" id="reset-btn" class="btn btn--secondary">Reset</button>
+          </div>
+          <div id="result-card" class="result-card">
+            <div class="result-card__primary"><span class="result-card__value" id="result-volume">0.00</span><span class="result-card__unit">m³</span><p class="result-card__label">Total Volume</p></div>
+            <div class="result-card__secondary">
+              <div class="result-card__item"><div class="result-card__item-value" id="result-tonnes">0.00</div><div class="result-card__item-label">Tonnes</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20kg Bags</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">Bulka Bags</div></div>
+            </div>
+            <div class="result-card__actions">
+              <button type="button" id="copy-btn" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy Result</button>
+              <button type="button" id="share-btn" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>Share Link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section"><div class="container">
+      <h2>The Sand Screed Layer for Paving</h2>
+      <p>Every professional paving job includes a carefully prepared sand screed layer between the compacted roadbase and the pavers themselves. This layer allows for precise levelling and provides the cushion that lets pavers be bedded firmly in place. For a courtyard or patio area of 5 metres by 5 metres, you'll need approximately 0.75 cubic metres of washed sand at the standard 30mm depth. This equates to around 1.13 tonnes, a convenient quantity for bulk delivery or potentially manageable with bags for those with strong backs and patience.</p>
+
+      <p>The 30mm depth gives enough material to work with when screeding while ensuring pavers bed into the sand properly. Thinner layers make it difficult to create a level surface, while thicker sand beds allow too much movement and can lead to uneven settling over time. Professional pavers stick to this depth for good reason.</p>
+
+      <h3>Complete Paving Base Structure</h3>
+      <p>The sand screed is just one layer in a complete paving base. Below it, you'll need 100mm or more of compacted roadbase material providing the structural support that prevents the paving from sinking or shifting. The sand layer sits on top of this compacted base, and the pavers sit on top of the sand. Getting each layer right is essential for paving that stays level and looks good for years.</p>
+
+      <h3>Sand Quality Requirements</h3>
+      <p>Use clean, washed sand specifically sold for paver bedding. This sand has consistent particle size and no clay, organic matter, or salt that could cause problems. Avoid using beach sand, which contains salt that can effloresce through pavers, or unwashed sand that may have clay content causing uneven compaction. The small premium for proper bedding sand is insignificant compared to the effort of relaying pavers that have settled unevenly.</p>
+
+      <p>Calculate the sub-base with our <a href="/roadbase-calculator/under-pavers/">roadbase under pavers calculator</a>, or use our main <a href="/sand-calculator/">sand calculator</a> for different area sizes.</p>
+    </div></section>
+
+    <section class="related-section"><div class="container">
+      <h2 class="related-section__title">Related Calculations</h2>
+      <div class="related-grid">
+        <a href="/roadbase-calculator/under-pavers/" class="material-card"><div class="material-card__icon material-card__icon--roadbase"></div><h3 class="material-card__title">Roadbase Under Pavers</h3><p class="material-card__desc">Sub-base layer</p></a>
+        <a href="/sand-calculator/paving-base/" class="material-card"><div class="material-card__icon material-card__icon--sand"></div><h3 class="material-card__title">Paving Base</h3><p class="material-card__desc">20m² area</p></a>
+        <a href="/gravel-calculator/around-pavers/" class="material-card"><div class="material-card__icon material-card__icon--gravel"></div><h3 class="material-card__title">Gravel Around Pavers</h3><p class="material-card__desc">Decorative infill</p></a>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer__inner">
+    <a href="/" class="footer__logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>LandscapeCalc</a>
+    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
+    <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
+  </div></footer>
+  <script src="/js/calculator.js"></script>
+</body>
+</html>
