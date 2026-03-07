@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulch Calculator | Calculate Mulch Volume & Weight | LandscapeCalc</title>
+  <meta name="description" content="Free mulch calculator for Australian gardens. Calculate how much mulch you need in cubic metres, tonnes, and bags. Works with wood chip, bark, pine bark and more.">
+  <meta name="keywords" content="mulch calculator, wood chip calculator, bark mulch calculator, garden mulch, cubic metres calculator, Australia">
+  <link rel="canonical" href="https://landscapecalc.com.au/mulch-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mulch Calculator | LandscapeCalc">
+  <meta property="og:description" content="Free mulch calculator for Australian gardens. Calculate wood chip, bark, pine bark and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landscapecalc.com.au/mulch-calculator/">
+  <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="LandscapeCalc">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mulch Calculator | LandscapeCalc">
+  <meta name="twitter:description" content="Free mulch calculator for Australian gardens.">
+  <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#2D5A3D">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://landscapecalc.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Mulch Calculator",
+        "item": "https://landscapecalc.com.au/mulch-calculator/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much mulch do I need for my garden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To calculate mulch volume, measure your garden bed's length and width in metres, then multiply by your desired depth (converted to metres). For a 5m x 3m bed at 75mm depth: 5 × 3 × 0.075 = 1.13 cubic metres. Use our calculator above to get instant results including weight and bag quantities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How deep should mulch be in Australia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Australian gardens, mulch should typically be applied at 50-100mm depth. For weed suppression and moisture retention, 75mm is ideal for most garden beds. Around plants, keep mulch 50-100mm away from stems to prevent rot. In high-traffic areas or slopes, consider 100mm for better coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many cubic metres in a trailer load of mulch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard 6x4 trailer holds approximately 0.7-1 cubic metre of mulch when filled level. A tandem trailer (8x5) holds about 1.5-2 cubic metres. Remember that mulch is sold by volume (cubic metres) but may settle during transport, so slight variations are normal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between mulch types?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wood chip mulch (0.4 t/m³) is chunky and long-lasting, ideal for paths. Bark mulch (0.35 t/m³) is finer and great for garden beds. Pine bark (0.3 t/m³) is lightweight and acidic, perfect for natives. Sugar cane mulch (0.2 t/m³) breaks down quickly, adding nutrients to soil. Choose based on your garden's needs and aesthetic preferences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert cubic metres of mulch to tonnes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the volume in cubic metres by the mulch's density. Wood chip mulch has a density of approximately 0.4 tonnes per cubic metre, so 1m³ of wood chip weighs about 0.4 tonnes (400kg). Our calculator automatically converts between volume and weight for all mulch types."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Mulch Calculator - LandscapeCalc",
+    "description": "Calculate how much mulch you need for your garden in cubic metres, tonnes, and bags.",
+    "url": "https://landscapecalc.com.au/mulch-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD"
+    }
+  }
+  </script>
+</head>
+<body data-material="mulch">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button type="button" class="header__mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/mulch-calculator/">Mulch Calculator</a>
+    <a href="/soil-calculator/">Soil Calculator</a>
+    <a href="/gravel-calculator/">Gravel Calculator</a>
+    <a href="/sand-calculator/">Sand Calculator</a>
+    <a href="/roadbase-calculator/">Road Base Calculator</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">Mulch Calculator</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Mulch Calculator</h1>
+        <p>Calculate exactly how much mulch you need for your garden beds, pathways, and landscaping projects. Get results in cubic metres, tonnes, and bags.</p>
+      </div>
+    </section>
+
+    <!-- Calculator Card -->
+    <div class="calculator-wrapper">
+      <div class="calculator-card">
+        <div class="calculator-card__header">
+          <h2 class="calculator-card__title">Calculate Your Mulch</h2>
+          <div class="material-tabs">
+            <button type="button" class="material-tab is-active" data-material="mulch">
+              <span class="material-dot material-dot--mulch"></span>
+              Mulch
+            </button>
+            <button type="button" class="material-tab" data-material="soil">
+              <span class="material-dot material-dot--soil"></span>
+              Soil
+            </button>
+            <button type="button" class="material-tab" data-material="gravel">
+              <span class="material-dot material-dot--gravel"></span>
+              Gravel
+            </button>
+            <button type="button" class="material-tab" data-material="sand">
+              <span class="material-dot material-dot--sand"></span>
+              Sand
+            </button>
+            <button type="button" class="material-tab" data-material="roadbase">
+              <span class="material-dot material-dot--roadbase"></span>
+              Road Base
+            </button>
+          </div>
+        </div>
+
+        <div class="calculator-card__body">
+          <!-- Shape Toggle -->
+          <div class="shape-toggle">
+            <button type="button" class="shape-toggle__btn is-active" data-shape="rectangle">Rectangle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="circle">Circle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="triangle">Triangle</button>
+          </div>
+
+          <!-- Rectangle Inputs -->
+          <div id="rectangle-inputs">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="length">Length (metres)</label>
+                <input type="number" id="length" class="form-input" placeholder="e.g. 5" min="0" step="0.01">
+                <span class="form-error">Please enter a valid length</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="width">Width (metres)</label>
+                <input type="number" id="width" class="form-input" placeholder="e.g. 3" min="0" step="0.01">
+                <span class="form-error">Please enter a valid width</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Circle Inputs -->
+          <div id="circle-inputs" style="display: none;">
+            <div class="form-group">
+              <label class="form-label" for="radius">Radius (metres)</label>
+              <input type="number" id="radius" class="form-input" placeholder="e.g. 2" min="0" step="0.01">
+              <span class="form-error">Please enter a valid radius</span>
+            </div>
+          </div>
+
+          <!-- Triangle Inputs -->
+          <div id="triangle-inputs" style="display: none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="base">Base (metres)</label>
+                <input type="number" id="base" class="form-input" placeholder="e.g. 4" min="0" step="0.01">
+                <span class="form-error">Please enter a valid base</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="height">Height (metres)</label>
+                <input type="number" id="height" class="form-input" placeholder="e.g. 3" min="0" step="0.01">
+                <span class="form-error">Please enter a valid height</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Material Subtype -->
+          <div class="form-group">
+            <label class="form-label" for="subtype">Mulch Type</label>
+            <select id="subtype" class="form-select">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <!-- Depth -->
+          <div class="form-group">
+            <label class="form-label">Depth</label>
+            <div class="depth-presets">
+              <button type="button" class="depth-chip" data-depth="50">50mm</button>
+              <button type="button" class="depth-chip is-active" data-depth="75">75mm</button>
+              <button type="button" class="depth-chip" data-depth="100">100mm</button>
+            </div>
+            <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="75">
+            <span class="form-error">Please enter a valid depth</span>
+            <p class="form-hint" id="depth-hint">Recommended depth: 50-100mm for garden beds</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
+            <button type="button" id="reset-btn" class="btn btn--secondary">Reset</button>
+          </div>
+
+          <!-- Result Card -->
+          <div id="result-card" class="result-card">
+            <div class="result-card__primary">
+              <span class="result-card__value" id="result-volume">0.00</span>
+              <span class="result-card__unit">m³</span>
+              <p class="result-card__label">Total Volume</p>
+            </div>
+            <div class="result-card__secondary">
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-tonnes">0.00</div>
+                <div class="result-card__item-label">Tonnes</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bags">0</div>
+                <div class="result-card__item-label">20kg Bags</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bulka">0</div>
+                <div class="result-card__item-label">Bulka Bags</div>
+              </div>
+            </div>
+            <div class="result-card__actions">
+              <button type="button" id="copy-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Result
+              </button>
+              <button type="button" id="share-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Share Link
+              </button>
+            </div>
+          </div>
+
+          <!-- How is this calculated -->
+          <div class="collapsible">
+            <button type="button" class="collapsible__trigger">
+              How is this calculated?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="collapsible__content">
+              <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
+              <p><strong>Weight:</strong> Volume × material density. Wood chip mulch has a density of 0.4 t/m³, while bark mulch is lighter at 0.35 t/m³.</p>
+              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough mulch.</p>
+              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content Section -->
+    <section class="content-section">
+      <div class="container">
+        <h2>How to Calculate Mulch for Your Garden</h2>
+        <p>Calculating the right amount of mulch for your Australian garden is essential for achieving optimal plant health and minimising waste. Whether you're preparing garden beds, creating pathways, or landscaping a large area, our mulch calculator takes the guesswork out of your project planning.</p>
+
+        <h3>Understanding Mulch Measurements</h3>
+        <p>In Australia, mulch is typically sold by the cubic metre (m³). To calculate how much you need, you'll multiply your area's length by width by depth. Our calculator converts your measurements instantly and provides results in cubic metres, tonnes, and bag quantities, making it easy to order the exact amount you need.</p>
+
+        <h3>Choosing the Right Mulch Depth</h3>
+        <p>For most Australian garden beds, a depth of 75mm strikes the right balance between weed suppression and moisture retention. If you're mulching around annual flower beds or areas with established plants, 50mm is usually sufficient and allows delicate stems to breathe. For native gardens, steep slopes, or areas where maximum weed control is the priority, go deeper at 100mm. This thicker layer creates a more effective barrier against weeds while providing better insulation for plant roots during temperature extremes.</p>
+
+        <h3>Types of Mulch Available in Australia</h3>
+        <p>Wood chip mulch at 0.4 tonnes per cubic metre is the most popular all-purpose option, made from chipped tree branches and ideal for pathways where its chunky texture provides excellent longevity. Bark mulch is slightly lighter at 0.35 t/m³ and breaks down slower than wood chips, making it a favourite for formal gardens where appearance matters. Pine bark at 0.3 t/m³ is the lightest option and naturally acidic, which makes it perfect for acid-loving plants like azaleas, camellias, and many Australian natives.</p>
+        <p>Cypress mulch at 0.45 t/m³ offers natural resistance to termites and fungal decay, making it the smart choice for areas near buildings or in regions with high termite activity. Eucalyptus mulch weighs in at 0.4 t/m³ and carries the distinctive scent of native Australian bush while breaking down to improve your soil quality over time. For vegetable gardens, sugar cane mulch at just 0.2 t/m³ is extremely lightweight and breaks down quickly, adding valuable nutrients back into your soil with each growing season.</p>
+        <p>Hardwood mulch at 0.5 t/m³ is denser and longer-lasting, perfect for low-maintenance areas where you want mulch that will stay in place for years.</p>
+
+        <h3>Tips for Applying Mulch</h3>
+        <p>To get the best results from your mulch application, always keep mulch 50-100mm away from plant stems and tree trunks to prevent collar rot and fungal issues. Water the area thoroughly before spreading your mulch, then water again after application to help it settle into place. Since organic mulches break down over time, plan to top up your mulch layer annually to maintain effective coverage. For extra weed suppression in problem areas, consider laying newspaper or cardboard underneath your mulch before spreading—this creates an additional barrier that smothers existing weeds while eventually breaking down to feed your soil.</p>
+
+        <h3>Ordering and Delivery</h3>
+        <p>Once you've calculated your mulch requirements, you can order from your local landscape supplier. Most suppliers in Australia deliver in bulk by the cubic metre or in bags. For larger projects, bulk delivery is significantly more cost-effective, while bags are convenient for smaller jobs or areas with limited access where a truck can't reach.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-section__title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How much mulch do I need for my garden?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>To calculate mulch volume, measure your garden bed's length and width in metres, then multiply by your desired depth (converted to metres). For a 5m x 3m bed at 75mm depth: 5 × 3 × 0.075 = 1.13 cubic metres. Use our calculator above to get instant results including weight and bag quantities.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How deep should mulch be in Australia?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>In Australian gardens, mulch should typically be applied at 50-100mm depth. For weed suppression and moisture retention, 75mm is ideal for most garden beds. Around plants, keep mulch 50-100mm away from stems to prevent rot. In high-traffic areas or slopes, consider 100mm for better coverage.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How many cubic metres in a trailer load of mulch?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>A standard 6x4 trailer holds approximately 0.7-1 cubic metre of mulch when filled level. A tandem trailer (8x5) holds about 1.5-2 cubic metres. Remember that mulch is sold by volume (cubic metres) but may settle during transport, so slight variations are normal.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              What's the difference between mulch types?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Wood chip mulch (0.4 t/m³) is chunky and long-lasting, ideal for paths. Bark mulch (0.35 t/m³) is finer and great for garden beds. Pine bark (0.3 t/m³) is lightweight and acidic, perfect for natives. Sugar cane mulch (0.2 t/m³) breaks down quickly, adding nutrients to soil. Choose based on your garden's needs and aesthetic preferences.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How do I convert cubic metres of mulch to tonnes?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Multiply the volume in cubic metres by the mulch's density. Wood chip mulch has a density of approximately 0.4 tonnes per cubic metre, so 1m³ of wood chip weighs about 0.4 tonnes (400kg). Our calculator automatically converts between volume and weight for all mulch types.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="related-section">
+      <div class="container">
+        <h2 class="related-section__title">You Might Also Need</h2>
+        <div class="related-grid">
+          <a href="/soil-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--soil"></div>
+            <h3 class="material-card__title">Soil Calculator</h3>
+            <p class="material-card__desc">Topsoil &amp; garden mix</p>
+          </a>
+          <a href="/gravel-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--gravel"></div>
+            <h3 class="material-card__title">Gravel Calculator</h3>
+            <p class="material-card__desc">Driveways &amp; decorative</p>
+          </a>
+          <a href="/sand-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--sand"></div>
+            <h3 class="material-card__title">Sand Calculator</h3>
+            <p class="material-card__desc">Paving &amp; construction</p>
+          </a>
+          <a href="/roadbase-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--roadbase"></div>
+            <h3 class="material-card__title">Road Base Calculator</h3>
+            <p class="material-card__desc">Driveways &amp; foundations</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="/about/">About</a>
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+      </nav>
+      <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
+    </div>
+  </footer>
+
+  <script src="/js/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Robots.txt for LandscapeCalc.com.au
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://landscapecalc.com.au/sitemap.xml

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sand Calculator | Calculate Paving & Building Sand | LandscapeCalc</title>
+  <meta name="description" content="Free sand calculator for Australian construction and landscaping. Calculate washed sand, paving sand, and brickies sand in cubic metres, tonnes, and bags.">
+  <meta name="keywords" content="sand calculator, paving sand calculator, washed sand calculator, brickies sand, plastering sand, cubic metres calculator, Australia">
+  <link rel="canonical" href="https://landscapecalc.com.au/sand-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sand Calculator | LandscapeCalc">
+  <meta property="og:description" content="Free sand calculator for Australian construction and landscaping. Calculate washed sand, paving sand, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landscapecalc.com.au/sand-calculator/">
+  <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="LandscapeCalc">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sand Calculator | LandscapeCalc">
+  <meta name="twitter:description" content="Free sand calculator for Australian construction and landscaping.">
+  <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#2D5A3D">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://landscapecalc.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sand Calculator",
+        "item": "https://landscapecalc.com.au/sand-calculator/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much sand do I need for paving?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For paving bedding, calculate sand by measuring length × width × depth. Standard bedding depth is 30-50mm. For a 20m² paved area at 30mm depth: 20 × 0.03 = 0.6 cubic metres. Our calculator provides instant results including tonnage for ordering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How deep should sand be under pavers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Australia, paving sand bedding should be 20-30mm deep after compaction. Lay sand at 30-40mm uncompacted, then screed level before laying pavers. For jointing sand between pavers, use fine kiln-dried sand swept into joints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between washed sand and brickies sand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Washed sand has been cleaned to remove clay and silt, making it ideal for concrete and paving. Brickies sand contains some clay content which makes mortar more workable for bricklaying. Both weigh approximately 1.5 tonnes per cubic metre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many tonnes of sand in a cubic metre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sand weighs approximately 1.5-1.6 tonnes per cubic metre depending on moisture content and type. Dry sand is lighter than wet sand. Our calculator uses 1.5 t/m³ for most sand types, which is the industry standard for dry, loose sand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much sand do I need for a sandpit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For sandpits, use washed play sand at 200-300mm depth. Calculate length × width × depth in metres. A 2m × 2m sandpit at 300mm deep needs: 2 × 2 × 0.3 = 1.2 cubic metres. Use only certified play sand that's been washed and tested for safety."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Sand Calculator - LandscapeCalc",
+    "description": "Calculate how much sand you need for paving and construction in cubic metres, tonnes, and bags.",
+    "url": "https://landscapecalc.com.au/sand-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD"
+    }
+  }
+  </script>
+</head>
+<body data-material="sand">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button type="button" class="header__mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/mulch-calculator/">Mulch Calculator</a>
+    <a href="/soil-calculator/">Soil Calculator</a>
+    <a href="/gravel-calculator/">Gravel Calculator</a>
+    <a href="/sand-calculator/">Sand Calculator</a>
+    <a href="/roadbase-calculator/">Road Base Calculator</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">Sand Calculator</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Sand Calculator</h1>
+        <p>Calculate exactly how much sand you need for paving, concrete, bricklaying, or sandpits. Get results in cubic metres, tonnes, and bags.</p>
+      </div>
+    </section>
+
+    <!-- Calculator Card -->
+    <div class="calculator-wrapper">
+      <div class="calculator-card">
+        <div class="calculator-card__header">
+          <h2 class="calculator-card__title">Calculate Your Sand</h2>
+          <div class="material-tabs">
+            <button type="button" class="material-tab" data-material="mulch">
+              <span class="material-dot material-dot--mulch"></span>
+              Mulch
+            </button>
+            <button type="button" class="material-tab" data-material="soil">
+              <span class="material-dot material-dot--soil"></span>
+              Soil
+            </button>
+            <button type="button" class="material-tab" data-material="gravel">
+              <span class="material-dot material-dot--gravel"></span>
+              Gravel
+            </button>
+            <button type="button" class="material-tab is-active" data-material="sand">
+              <span class="material-dot material-dot--sand"></span>
+              Sand
+            </button>
+            <button type="button" class="material-tab" data-material="roadbase">
+              <span class="material-dot material-dot--roadbase"></span>
+              Road Base
+            </button>
+          </div>
+        </div>
+
+        <div class="calculator-card__body">
+          <!-- Shape Toggle -->
+          <div class="shape-toggle">
+            <button type="button" class="shape-toggle__btn is-active" data-shape="rectangle">Rectangle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="circle">Circle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="triangle">Triangle</button>
+          </div>
+
+          <!-- Rectangle Inputs -->
+          <div id="rectangle-inputs">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="length">Length (metres)</label>
+                <input type="number" id="length" class="form-input" placeholder="e.g. 8" min="0" step="0.01">
+                <span class="form-error">Please enter a valid length</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="width">Width (metres)</label>
+                <input type="number" id="width" class="form-input" placeholder="e.g. 4" min="0" step="0.01">
+                <span class="form-error">Please enter a valid width</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Circle Inputs -->
+          <div id="circle-inputs" style="display: none;">
+            <div class="form-group">
+              <label class="form-label" for="radius">Radius (metres)</label>
+              <input type="number" id="radius" class="form-input" placeholder="e.g. 2" min="0" step="0.01">
+              <span class="form-error">Please enter a valid radius</span>
+            </div>
+          </div>
+
+          <!-- Triangle Inputs -->
+          <div id="triangle-inputs" style="display: none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="base">Base (metres)</label>
+                <input type="number" id="base" class="form-input" placeholder="e.g. 4" min="0" step="0.01">
+                <span class="form-error">Please enter a valid base</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="height">Height (metres)</label>
+                <input type="number" id="height" class="form-input" placeholder="e.g. 3" min="0" step="0.01">
+                <span class="form-error">Please enter a valid height</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Material Subtype -->
+          <div class="form-group">
+            <label class="form-label" for="subtype">Sand Type</label>
+            <select id="subtype" class="form-select">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <!-- Depth -->
+          <div class="form-group">
+            <label class="form-label">Depth</label>
+            <div class="depth-presets">
+              <button type="button" class="depth-chip is-active" data-depth="30">30mm</button>
+              <button type="button" class="depth-chip" data-depth="50">50mm</button>
+              <button type="button" class="depth-chip" data-depth="75">75mm</button>
+            </div>
+            <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="30">
+            <span class="form-error">Please enter a valid depth</span>
+            <p class="form-hint" id="depth-hint">Recommended depth: 30-50mm for paving bedding</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
+            <button type="button" id="reset-btn" class="btn btn--secondary">Reset</button>
+          </div>
+
+          <!-- Result Card -->
+          <div id="result-card" class="result-card">
+            <div class="result-card__primary">
+              <span class="result-card__value" id="result-volume">0.00</span>
+              <span class="result-card__unit">m³</span>
+              <p class="result-card__label">Total Volume</p>
+            </div>
+            <div class="result-card__secondary">
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-tonnes">0.00</div>
+                <div class="result-card__item-label">Tonnes</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bags">0</div>
+                <div class="result-card__item-label">20kg Bags</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bulka">0</div>
+                <div class="result-card__item-label">Bulka Bags</div>
+              </div>
+            </div>
+            <div class="result-card__actions">
+              <button type="button" id="copy-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Result
+              </button>
+              <button type="button" id="share-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Share Link
+              </button>
+            </div>
+          </div>
+
+          <!-- How is this calculated -->
+          <div class="collapsible">
+            <button type="button" class="collapsible__trigger">
+              How is this calculated?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="collapsible__content">
+              <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
+              <p><strong>Weight:</strong> Volume × sand density. Most sand types have a density of approximately 1.5 t/m³, with paving sand slightly heavier at 1.6 t/m³.</p>
+              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough sand.</p>
+              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content Section -->
+    <section class="content-section">
+      <div class="container">
+        <h2>How to Calculate Sand for Your Project</h2>
+        <p>Calculating the correct amount of sand is essential for any construction, paving, or landscaping project in Australia. Whether you're laying pavers, mixing concrete, building a sandpit, or doing brickwork, our sand calculator provides accurate measurements instantly.</p>
+
+        <h3>Understanding Sand Measurements</h3>
+        <p>In Australia, sand is sold by the cubic metre (m³) or tonne. Since sand is relatively dense, suppliers often price by weight. Our calculator provides both volume and weight conversions, making it easy to compare prices and order accurately.</p>
+
+        <h3>Choosing the Right Sand Depth</h3>
+        <p>For standard paving work, lay your bedding sand at 30mm uncompacted—this will settle to around 20-25mm once you've compacted it and set your pavers. When working with uneven surfaces or when you need more room to adjust paver levels, increase the bedding layer to 50mm. For sandpits, drainage layers, and other non-paving applications, you'll typically want 75mm or more depending on the specific requirements of your project.</p>
+
+        <h3>Types of Sand Available in Australia</h3>
+        <p>Washed sand at 1.5 tonnes per cubic metre is the most versatile option, thoroughly cleaned to remove silt and clay which makes it ideal for concrete mixing, rendering, and general construction work. Brickies sand, also at 1.5 t/m³, deliberately retains some clay content because this improves the workability of mortar—bricklayers specifically request this type for laying bricks and blocks. Plastering sand at 1.5 t/m³ is finely graded and washed to produce the smooth finish required for internal and external render work.</p>
+        <p>Paving sand is slightly heavier at 1.6 t/m³ due to its coarser, more angular particle shape. This angularity is deliberate—it helps the sand compact firmly and lock together to create a stable bedding layer under pavers. White sand and yellow sand, both at 1.5 t/m³, serve decorative purposes in gardens and pathways, with colour being the main differentiator. For children's play areas, sandpit sand at 1.5 t/m³ is washed, tested, and certified safe, meeting Australian safety standards for play equipment.</p>
+
+        <h3>Tips for Using Sand</h3>
+        <p>When laying pavers, screed your sand level using metal rails as guides and a straight edge to create a perfectly flat surface before you begin setting stones. Always compact your paving sand before laying pavers, not after—compacting afterwards can crack pavers and create an uneven surface. Try to keep your sand dry during the project, as wet sand is significantly heavier and much harder to screed smoothly. Order approximately 10% more than your calculations suggest to account for compaction, wastage, and those inevitable small spillages during the job. When mixing concrete, always use clean washed sand free of organic matter, as contamination weakens the final product.</p>
+
+        <h3>Sand for Different Applications</h3>
+        <p>Matching the right sand to your application makes a significant difference to your results. For paving projects, use coarse paving sand to create the bedding layer, then switch to fine kiln-dried jointing sand to fill the gaps between pavers. Concrete requires washed sand mixed with cement and aggregate in the correct proportions for your strength requirements. Bricklaying calls for brickies sand mixed with cement to create mortar with good workability that sticks properly to bricks. For sandpits, never compromise on quality—only use certified play sand that has been washed and tested to ensure it's safe for children.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-section__title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How much sand do I need for paving?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>For paving bedding, calculate sand by measuring length × width × depth. Standard bedding depth is 30-50mm. For a 20m² paved area at 30mm depth: 20 × 0.03 = 0.6 cubic metres. Our calculator provides instant results including tonnage for ordering.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How deep should sand be under pavers?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>In Australia, paving sand bedding should be 20-30mm deep after compaction. Lay sand at 30-40mm uncompacted, then screed level before laying pavers. For jointing sand between pavers, use fine kiln-dried sand swept into joints.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              What's the difference between washed sand and brickies sand?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Washed sand has been cleaned to remove clay and silt, making it ideal for concrete and paving. Brickies sand contains some clay content which makes mortar more workable for bricklaying. Both weigh approximately 1.5 tonnes per cubic metre.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How many tonnes of sand in a cubic metre?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Sand weighs approximately 1.5-1.6 tonnes per cubic metre depending on moisture content and type. Dry sand is lighter than wet sand. Our calculator uses 1.5 t/m³ for most sand types, which is the industry standard for dry, loose sand.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How much sand do I need for a sandpit?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>For sandpits, use washed play sand at 200-300mm depth. Calculate length × width × depth in metres. A 2m × 2m sandpit at 300mm deep needs: 2 × 2 × 0.3 = 1.2 cubic metres. Use only certified play sand that's been washed and tested for safety.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="related-section">
+      <div class="container">
+        <h2 class="related-section__title">You Might Also Need</h2>
+        <div class="related-grid">
+          <a href="/roadbase-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--roadbase"></div>
+            <h3 class="material-card__title">Road Base Calculator</h3>
+            <p class="material-card__desc">Driveways &amp; foundations</p>
+          </a>
+          <a href="/gravel-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--gravel"></div>
+            <h3 class="material-card__title">Gravel Calculator</h3>
+            <p class="material-card__desc">Driveways &amp; decorative</p>
+          </a>
+          <a href="/soil-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--soil"></div>
+            <h3 class="material-card__title">Soil Calculator</h3>
+            <p class="material-card__desc">Topsoil &amp; garden mix</p>
+          </a>
+          <a href="/mulch-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--mulch"></div>
+            <h3 class="material-card__title">Mulch Calculator</h3>
+            <p class="material-card__desc">Garden beds &amp; paths</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="/about/">About</a>
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+      </nav>
+      <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
+    </div>
+  </footer>
+
+  <script src="/js/calculator.js"></script>
+</body>
+</html>

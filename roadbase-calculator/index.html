@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Base Calculator | Calculate DGB20 & Crusher Dust | LandscapeCalc</title>
+  <meta name="description" content="Free road base calculator for Australian driveways and construction. Calculate DGB20, DGB10, and crusher dust in cubic metres, tonnes, and bags.">
+  <meta name="keywords" content="road base calculator, DGB20 calculator, crusher dust calculator, driveway base, FCR calculator, cubic metres calculator, Australia">
+  <link rel="canonical" href="https://landscapecalc.com.au/roadbase-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Road Base Calculator | LandscapeCalc">
+  <meta property="og:description" content="Free road base calculator for Australian driveways and construction. Calculate DGB20, crusher dust, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landscapecalc.com.au/roadbase-calculator/">
+  <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="LandscapeCalc">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Road Base Calculator | LandscapeCalc">
+  <meta name="twitter:description" content="Free road base calculator for Australian driveways and construction.">
+  <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#2D5A3D">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://landscapecalc.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Road Base Calculator",
+        "item": "https://landscapecalc.com.au/roadbase-calculator/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much road base do I need for a driveway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate road base by measuring length × width × depth. For a 10m × 3m driveway at 150mm depth: 10 × 3 × 0.15 = 4.5 cubic metres. At 1.8 t/m³ density, that's approximately 8.1 tonnes of DGB20 road base."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How deep should road base be for a driveway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Australia, residential driveways typically need 100-150mm of compacted road base. For heavy vehicles or soft subgrade, increase to 200mm. Compact in 75mm layers, with each layer reaching 95%+ compaction before adding the next."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between DGB20 and DGB10?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DGB20 contains particles up to 20mm and is the standard road base for driveways and paths. DGB10 has smaller particles (up to 10mm) and compacts more tightly, making it ideal for under pavers and finer finishes. Both have a density of approximately 1.8 t/m³."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many tonnes of road base in a cubic metre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Road base weighs approximately 1.6-1.8 tonnes per cubic metre depending on the type. DGB20 and DGB10 are typically 1.8 t/m³, while crusher dust is lighter at 1.6 t/m³. Our calculator provides automatic weight conversions for all types."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use crusher dust instead of road base?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crusher dust (fine crushed rock) is best as a surface layer or under pavers, not as structural road base. It lacks the larger aggregate that gives road base its load-bearing capacity. For driveways, use proper graded road base (DGB20) for the base layer."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Road Base Calculator - LandscapeCalc",
+    "description": "Calculate how much road base you need for driveways and construction in cubic metres, tonnes, and bags.",
+    "url": "https://landscapecalc.com.au/roadbase-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD"
+    }
+  }
+  </script>
+</head>
+<body data-material="roadbase">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button type="button" class="header__mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/mulch-calculator/">Mulch Calculator</a>
+    <a href="/soil-calculator/">Soil Calculator</a>
+    <a href="/gravel-calculator/">Gravel Calculator</a>
+    <a href="/sand-calculator/">Sand Calculator</a>
+    <a href="/roadbase-calculator/">Road Base Calculator</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">Road Base Calculator</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Road Base Calculator</h1>
+        <p>Calculate exactly how much road base, DGB20, or crusher dust you need for your driveway, paving base, or construction project. Get results in cubic metres, tonnes, and bags.</p>
+      </div>
+    </section>
+
+    <!-- Calculator Card -->
+    <div class="calculator-wrapper">
+      <div class="calculator-card">
+        <div class="calculator-card__header">
+          <h2 class="calculator-card__title">Calculate Your Road Base</h2>
+          <div class="material-tabs">
+            <button type="button" class="material-tab" data-material="mulch">
+              <span class="material-dot material-dot--mulch"></span>
+              Mulch
+            </button>
+            <button type="button" class="material-tab" data-material="soil">
+              <span class="material-dot material-dot--soil"></span>
+              Soil
+            </button>
+            <button type="button" class="material-tab" data-material="gravel">
+              <span class="material-dot material-dot--gravel"></span>
+              Gravel
+            </button>
+            <button type="button" class="material-tab" data-material="sand">
+              <span class="material-dot material-dot--sand"></span>
+              Sand
+            </button>
+            <button type="button" class="material-tab is-active" data-material="roadbase">
+              <span class="material-dot material-dot--roadbase"></span>
+              Road Base
+            </button>
+          </div>
+        </div>
+
+        <div class="calculator-card__body">
+          <!-- Shape Toggle -->
+          <div class="shape-toggle">
+            <button type="button" class="shape-toggle__btn is-active" data-shape="rectangle">Rectangle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="circle">Circle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="triangle">Triangle</button>
+          </div>
+
+          <!-- Rectangle Inputs -->
+          <div id="rectangle-inputs">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="length">Length (metres)</label>
+                <input type="number" id="length" class="form-input" placeholder="e.g. 10" min="0" step="0.01">
+                <span class="form-error">Please enter a valid length</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="width">Width (metres)</label>
+                <input type="number" id="width" class="form-input" placeholder="e.g. 3" min="0" step="0.01">
+                <span class="form-error">Please enter a valid width</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Circle Inputs -->
+          <div id="circle-inputs" style="display: none;">
+            <div class="form-group">
+              <label class="form-label" for="radius">Radius (metres)</label>
+              <input type="number" id="radius" class="form-input" placeholder="e.g. 2" min="0" step="0.01">
+              <span class="form-error">Please enter a valid radius</span>
+            </div>
+          </div>
+
+          <!-- Triangle Inputs -->
+          <div id="triangle-inputs" style="display: none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="base">Base (metres)</label>
+                <input type="number" id="base" class="form-input" placeholder="e.g. 4" min="0" step="0.01">
+                <span class="form-error">Please enter a valid base</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="height">Height (metres)</label>
+                <input type="number" id="height" class="form-input" placeholder="e.g. 3" min="0" step="0.01">
+                <span class="form-error">Please enter a valid height</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Material Subtype -->
+          <div class="form-group">
+            <label class="form-label" for="subtype">Road Base Type</label>
+            <select id="subtype" class="form-select">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <!-- Depth -->
+          <div class="form-group">
+            <label class="form-label">Depth</label>
+            <div class="depth-presets">
+              <button type="button" class="depth-chip" data-depth="100">100mm</button>
+              <button type="button" class="depth-chip is-active" data-depth="150">150mm</button>
+              <button type="button" class="depth-chip" data-depth="200">200mm</button>
+            </div>
+            <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="150">
+            <span class="form-error">Please enter a valid depth</span>
+            <p class="form-hint" id="depth-hint">Recommended depth: 100-200mm for driveways and paths</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
+            <button type="button" id="reset-btn" class="btn btn--secondary">Reset</button>
+          </div>
+
+          <!-- Result Card -->
+          <div id="result-card" class="result-card">
+            <div class="result-card__primary">
+              <span class="result-card__value" id="result-volume">0.00</span>
+              <span class="result-card__unit">m³</span>
+              <p class="result-card__label">Total Volume</p>
+            </div>
+            <div class="result-card__secondary">
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-tonnes">0.00</div>
+                <div class="result-card__item-label">Tonnes</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bags">0</div>
+                <div class="result-card__item-label">20kg Bags</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bulka">0</div>
+                <div class="result-card__item-label">Bulka Bags</div>
+              </div>
+            </div>
+            <div class="result-card__actions">
+              <button type="button" id="copy-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Result
+              </button>
+              <button type="button" id="share-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Share Link
+              </button>
+            </div>
+          </div>
+
+          <!-- How is this calculated -->
+          <div class="collapsible">
+            <button type="button" class="collapsible__trigger">
+              How is this calculated?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="collapsible__content">
+              <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
+              <p><strong>Weight:</strong> Volume × road base density. DGB20 has a density of 1.8 t/m³, while crusher dust is lighter at 1.6 t/m³.</p>
+              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough material.</p>
+              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content Section -->
+    <section class="content-section">
+      <div class="container">
+        <h2>How to Calculate Road Base for Your Project</h2>
+        <p>Calculating the correct amount of road base is essential for any driveway, pathway, or construction project in Australia. Road base provides the crucial structural layer that supports traffic loads and ensures long-lasting surfaces. Our calculator helps you determine exactly how much you need.</p>
+
+        <h3>Understanding Road Base Measurements</h3>
+        <p>In Australia, road base is sold by the tonne or cubic metre. Since road base is dense and heavy (up to 1.8 tonnes per cubic metre), most suppliers price by weight. Our calculator provides both measurements, making it easy to get accurate quotes and order the right amount.</p>
+
+        <h3>Choosing the Right Road Base Depth</h3>
+        <p>For pedestrian paths and light-use areas where vehicles won't travel, 100mm of compacted road base provides sufficient support. Standard residential driveways and parking areas perform best with 150mm of properly compacted material—this depth handles regular car traffic without issues. If you're expecting heavy vehicles like delivery trucks or caravans, or if your subgrade soil is soft clay or poorly draining, increase to 200mm or more to prevent rutting and failure over time.</p>
+
+        <h3>Types of Road Base Available in Australia</h3>
+        <p>DGB20 at 1.8 tonnes per cubic metre is Australia's most widely used road base, containing a carefully graded mix of particles from fine dust up to 20mm stones. This grading is what gives it structural strength—the different particle sizes lock together during compaction to create a solid foundation for driveways, paths, and building slabs. DGB10 at the same density offers finer grading with maximum particles of 10mm, making it better suited for thinner applications or where you need tighter compaction under pavers.</p>
+        <p>FCR (Fine Crushed Rock) at 1.7 t/m³ contains even smaller particles than DGB10 and is commonly used as a finishing layer or directly under pavers where a smoother surface is required. For environmentally conscious projects, recycled road base at 1.6 t/m³ is manufactured from crushed concrete and brick, offering good performance for non-structural applications at a lower cost. Quarry rubble at 1.8 t/m³ is unprocessed material straight from the quarry, suitable for bulk filling and rural driveways where precise grading isn't critical. Crusher dust at 1.6 t/m³ is the fine material produced during crushing operations—useful as a surface layer or paver bedding but not suitable as a structural base layer on its own.</p>
+
+        <h3>Proper Road Base Installation</h3>
+        <p>Successful road base installation requires attention to technique at every stage. Begin by excavating to the correct depth, remembering to account for both your base layer thickness and whatever surface material will go on top. Before adding any road base, compact your existing subgrade soil thoroughly—a weak foundation will cause problems regardless of how well you install the layers above.</p>
+        <p>When spreading road base, work in layers no thicker than 75mm and compact each layer fully before adding the next. Each layer should reach 95% or greater compaction density, which typically requires a vibrating plate compactor for paths and a roller for larger areas. Adding a light spray of water during compaction helps particles bind together and achieve maximum density. Finally, ensure you create a 1-2% cross-fall so water drains away from buildings and doesn't pool on the surface.</p>
+
+        <h3>Road Base vs Gravel</h3>
+        <p>Despite their similar appearance, road base and gravel serve fundamentally different purposes. Road base is engineered with a specific particle size distribution—called grading—that allows particles to lock together during compaction, creating a solid structural layer capable of supporting heavy loads. Gravel, by contrast, typically consists of single-sized decorative stones that don't compact or interlock. For proper driveway construction, always use road base as your structural foundation, then apply gravel, concrete, or asphalt as the finished surface.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-section__title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How much road base do I need for a driveway?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Calculate road base by measuring length × width × depth. For a 10m × 3m driveway at 150mm depth: 10 × 3 × 0.15 = 4.5 cubic metres. At 1.8 t/m³ density, that's approximately 8.1 tonnes of DGB20 road base.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How deep should road base be for a driveway?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>In Australia, residential driveways typically need 100-150mm of compacted road base. For heavy vehicles or soft subgrade, increase to 200mm. Compact in 75mm layers, with each layer reaching 95%+ compaction before adding the next.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              What's the difference between DGB20 and DGB10?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>DGB20 contains particles up to 20mm and is the standard road base for driveways and paths. DGB10 has smaller particles (up to 10mm) and compacts more tightly, making it ideal for under pavers and finer finishes. Both have a density of approximately 1.8 t/m³.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How many tonnes of road base in a cubic metre?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Road base weighs approximately 1.6-1.8 tonnes per cubic metre depending on the type. DGB20 and DGB10 are typically 1.8 t/m³, while crusher dust is lighter at 1.6 t/m³. Our calculator provides automatic weight conversions for all types.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Can I use crusher dust instead of road base?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Crusher dust (fine crushed rock) is best as a surface layer or under pavers, not as structural road base. It lacks the larger aggregate that gives road base its load-bearing capacity. For driveways, use proper graded road base (DGB20) for the base layer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="related-section">
+      <div class="container">
+        <h2 class="related-section__title">You Might Also Need</h2>
+        <div class="related-grid">
+          <a href="/gravel-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--gravel"></div>
+            <h3 class="material-card__title">Gravel Calculator</h3>
+            <p class="material-card__desc">Driveways &amp; decorative</p>
+          </a>
+          <a href="/sand-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--sand"></div>
+            <h3 class="material-card__title">Sand Calculator</h3>
+            <p class="material-card__desc">Paving &amp; construction</p>
+          </a>
+          <a href="/soil-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--soil"></div>
+            <h3 class="material-card__title">Soil Calculator</h3>
+            <p class="material-card__desc">Topsoil &amp; garden mix</p>
+          </a>
+          <a href="/mulch-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--mulch"></div>
+            <h3 class="material-card__title">Mulch Calculator</h3>
+            <p class="material-card__desc">Garden beds &amp; paths</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="/about/">About</a>
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+      </nav>
+      <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
+    </div>
+  </footer>
+
+  <script src="/js/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#2D5A3D"/>
+
+  <!-- Leaf Icon -->
+  <g transform="translate(510, 180)">
+    <path d="M90 10C90 10 45 55 45 115C45 145 60 175 90 190C90 160 105 130 105 100C105 130 120 160 120 190C150 175 165 145 165 115C165 55 90 10 90 10Z" fill="white" fill-opacity="0.9"/>
+    <path d="M90 100C90 130 75 160 75 190C75 205 82.5 220 90 220C97.5 220 105 205 105 190C105 160 90 130 90 100Z" fill="white" fill-opacity="0.6"/>
+  </g>
+
+  <!-- Text -->
+  <text x="600" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="72" font-weight="700" fill="white">LandscapeCalc</text>
+  <text x="600" y="490" text-anchor="middle" font-family="sans-serif" font-size="32" fill="white" fill-opacity="0.9">Landscape Materials Calculator for Australia</text>
+
+  <!-- Domain -->
+  <text x="600" y="560" text-anchor="middle" font-family="sans-serif" font-size="24" fill="white" fill-opacity="0.7">landscapecalc.com.au</text>
+</svg>

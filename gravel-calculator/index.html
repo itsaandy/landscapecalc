@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravel Calculator | Calculate Blue Metal & Crushed Rock | LandscapeCalc</title>
+  <meta name="description" content="Free gravel calculator for Australian driveways and gardens. Calculate blue metal, crushed granite, and river pebbles in cubic metres, tonnes, and bags.">
+  <meta name="keywords" content="gravel calculator, blue metal calculator, crushed rock calculator, driveway gravel, decorative pebbles, cubic metres calculator, Australia">
+  <link rel="canonical" href="https://landscapecalc.com.au/gravel-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gravel Calculator | LandscapeCalc">
+  <meta property="og:description" content="Free gravel calculator for Australian driveways and gardens. Calculate blue metal, crushed granite, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landscapecalc.com.au/gravel-calculator/">
+  <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="LandscapeCalc">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gravel Calculator | LandscapeCalc">
+  <meta name="twitter:description" content="Free gravel calculator for Australian driveways and gardens.">
+  <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#2D5A3D">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://landscapecalc.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gravel Calculator",
+        "item": "https://landscapecalc.com.au/gravel-calculator/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much gravel do I need for my driveway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calculate driveway gravel by measuring length × width × depth (in metres). For a 10m × 3m driveway at 75mm depth: 10 × 3 × 0.075 = 2.25 cubic metres. Use our calculator to get instant results including weight conversions for ordering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How deep should gravel be for a driveway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For residential driveways in Australia, gravel should be 75-100mm deep over a compacted roadbase layer. For light traffic paths, 50mm is sufficient. Always compact gravel in layers of no more than 75mm for best results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between blue metal and crushed granite?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Blue metal (1.5 t/m³) is crushed basalt/bluestone, dark grey in colour, commonly used for driveways and drainage. Crushed granite (1.4 t/m³) is lighter in colour with gold/brown tones, popular for decorative paths and garden features."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many tonnes of gravel in a cubic metre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gravel typically weighs 1.4-1.6 tonnes per cubic metre depending on the type. Blue metal is approximately 1.5 t/m³, river pebbles are 1.6 t/m³, and crushed granite is 1.4 t/m³. Our calculator provides automatic weight conversions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use decorative gravel for driveways?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While decorative pebbles look attractive, they're not ideal for driveways as they can scatter and don't compact well. For driveways, use angular crushed rock like blue metal or granite that locks together. Save decorative pebbles for garden beds and paths."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Gravel Calculator - LandscapeCalc",
+    "description": "Calculate how much gravel you need for driveways and gardens in cubic metres, tonnes, and bags.",
+    "url": "https://landscapecalc.com.au/gravel-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD"
+    }
+  }
+  </script>
+</head>
+<body data-material="gravel">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+        <a href="/about/">About</a>
+      </nav>
+      <button type="button" class="header__mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="/mulch-calculator/">Mulch Calculator</a>
+    <a href="/soil-calculator/">Soil Calculator</a>
+    <a href="/gravel-calculator/">Gravel Calculator</a>
+    <a href="/sand-calculator/">Sand Calculator</a>
+    <a href="/roadbase-calculator/">Road Base Calculator</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">Gravel Calculator</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Gravel Calculator</h1>
+        <p>Calculate exactly how much gravel, blue metal, or decorative pebbles you need for your driveway, pathway, or garden project. Get results in cubic metres, tonnes, and bags.</p>
+      </div>
+    </section>
+
+    <!-- Calculator Card -->
+    <div class="calculator-wrapper">
+      <div class="calculator-card">
+        <div class="calculator-card__header">
+          <h2 class="calculator-card__title">Calculate Your Gravel</h2>
+          <div class="material-tabs">
+            <button type="button" class="material-tab" data-material="mulch">
+              <span class="material-dot material-dot--mulch"></span>
+              Mulch
+            </button>
+            <button type="button" class="material-tab" data-material="soil">
+              <span class="material-dot material-dot--soil"></span>
+              Soil
+            </button>
+            <button type="button" class="material-tab is-active" data-material="gravel">
+              <span class="material-dot material-dot--gravel"></span>
+              Gravel
+            </button>
+            <button type="button" class="material-tab" data-material="sand">
+              <span class="material-dot material-dot--sand"></span>
+              Sand
+            </button>
+            <button type="button" class="material-tab" data-material="roadbase">
+              <span class="material-dot material-dot--roadbase"></span>
+              Road Base
+            </button>
+          </div>
+        </div>
+
+        <div class="calculator-card__body">
+          <!-- Shape Toggle -->
+          <div class="shape-toggle">
+            <button type="button" class="shape-toggle__btn is-active" data-shape="rectangle">Rectangle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="circle">Circle</button>
+            <button type="button" class="shape-toggle__btn" data-shape="triangle">Triangle</button>
+          </div>
+
+          <!-- Rectangle Inputs -->
+          <div id="rectangle-inputs">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="length">Length (metres)</label>
+                <input type="number" id="length" class="form-input" placeholder="e.g. 10" min="0" step="0.01">
+                <span class="form-error">Please enter a valid length</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="width">Width (metres)</label>
+                <input type="number" id="width" class="form-input" placeholder="e.g. 3" min="0" step="0.01">
+                <span class="form-error">Please enter a valid width</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Circle Inputs -->
+          <div id="circle-inputs" style="display: none;">
+            <div class="form-group">
+              <label class="form-label" for="radius">Radius (metres)</label>
+              <input type="number" id="radius" class="form-input" placeholder="e.g. 2" min="0" step="0.01">
+              <span class="form-error">Please enter a valid radius</span>
+            </div>
+          </div>
+
+          <!-- Triangle Inputs -->
+          <div id="triangle-inputs" style="display: none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="base">Base (metres)</label>
+                <input type="number" id="base" class="form-input" placeholder="e.g. 4" min="0" step="0.01">
+                <span class="form-error">Please enter a valid base</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="height">Height (metres)</label>
+                <input type="number" id="height" class="form-input" placeholder="e.g. 3" min="0" step="0.01">
+                <span class="form-error">Please enter a valid height</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Material Subtype -->
+          <div class="form-group">
+            <label class="form-label" for="subtype">Gravel Type</label>
+            <select id="subtype" class="form-select">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <!-- Depth -->
+          <div class="form-group">
+            <label class="form-label">Depth</label>
+            <div class="depth-presets">
+              <button type="button" class="depth-chip is-active" data-depth="50">50mm</button>
+              <button type="button" class="depth-chip" data-depth="75">75mm</button>
+              <button type="button" class="depth-chip" data-depth="100">100mm</button>
+            </div>
+            <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="50">
+            <span class="form-error">Please enter a valid depth</span>
+            <p class="form-hint" id="depth-hint">Recommended depth: 50-100mm for pathways and driveways</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
+            <button type="button" id="reset-btn" class="btn btn--secondary">Reset</button>
+          </div>
+
+          <!-- Result Card -->
+          <div id="result-card" class="result-card">
+            <div class="result-card__primary">
+              <span class="result-card__value" id="result-volume">0.00</span>
+              <span class="result-card__unit">m³</span>
+              <p class="result-card__label">Total Volume</p>
+            </div>
+            <div class="result-card__secondary">
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-tonnes">0.00</div>
+                <div class="result-card__item-label">Tonnes</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bags">0</div>
+                <div class="result-card__item-label">20kg Bags</div>
+              </div>
+              <div class="result-card__item">
+                <div class="result-card__item-value" id="result-bulka">0</div>
+                <div class="result-card__item-label">Bulka Bags</div>
+              </div>
+            </div>
+            <div class="result-card__actions">
+              <button type="button" id="copy-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Result
+              </button>
+              <button type="button" id="share-btn" class="btn btn--outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Share Link
+              </button>
+            </div>
+          </div>
+
+          <!-- How is this calculated -->
+          <div class="collapsible">
+            <button type="button" class="collapsible__trigger">
+              How is this calculated?
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="collapsible__content">
+              <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
+              <p><strong>Weight:</strong> Volume × gravel density. Blue metal has a density of 1.5 t/m³, while river pebbles are heavier at 1.6 t/m³.</p>
+              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough gravel.</p>
+              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content Section -->
+    <section class="content-section">
+      <div class="container">
+        <h2>How to Calculate Gravel for Your Project</h2>
+        <p>Calculating the right amount of gravel for your Australian property is essential whether you're creating a driveway, pathway, drainage solution, or decorative garden feature. Our gravel calculator provides instant, accurate measurements to help you order the exact amount needed.</p>
+
+        <h3>Understanding Gravel Measurements</h3>
+        <p>In Australia, gravel is typically sold by the tonne or cubic metre. Since gravel is dense and heavy, weight-based pricing is common. Our calculator provides both volume and weight measurements, allowing you to compare quotes from different suppliers accurately.</p>
+
+        <h3>Choosing the Right Gravel Depth</h3>
+        <p>For decorative garden beds where gravel serves as a mulch alternative or for paths with only light foot traffic, 50mm provides adequate coverage while keeping costs reasonable. General pathways and residential driveways perform best with 75mm of gravel laid over a properly compacted roadbase foundation—this depth gives vehicles enough material to grip while remaining stable underfoot. In heavy traffic areas or where drainage is the primary concern, increase the depth to 100mm to ensure longevity and proper water flow.</p>
+
+        <h3>Types of Gravel Available in Australia</h3>
+        <p>Blue metal (also called bluestone) at 1.5 tonnes per cubic metre remains Australia's most popular choice for driveways and drainage applications. This crushed basalt ranges from dark grey to blue-black in colour, and its angular shape locks together during compaction to create an exceptionally stable surface. Crushed granite at 1.4 t/m³ offers similar performance with a broader colour palette ranging from gold to pink, making it popular for decorative paths where appearance matters as much as function.</p>
+        <p>River pebbles at 1.6 t/m³ are the heaviest option and feature smooth, rounded stones in natural earth tones. Their polished appearance makes them perfect for garden beds, water features, and areas where a softer aesthetic is desired—though their rounded shape means they don't compact as firmly as angular alternatives. Crushed sandstone at 1.4 t/m³ brings warm yellow to brown tones that complement heritage properties and native gardens beautifully, while crushed limestone at 1.5 t/m³ offers bright white to cream colours for a striking contrast in the landscape.</p>
+        <p>For environmentally conscious projects, recycled aggregate at 1.4 t/m³ is made from crushed concrete and brick, providing a sustainable option for non-decorative applications like drainage or base layers. Decorative pebbles at 1.5 t/m³ come in various colours and sizes for feature areas where visual impact is the priority.</p>
+
+        <h3>Tips for Using Gravel</h3>
+        <p>To ensure your gravel stays where you want it and performs well over time, always install landscape fabric underneath to prevent weeds from pushing through. Edge your gravel areas with steel, timber, or concrete borders to stop stones from migrating into surrounding lawn or garden beds. For driveways and high-traffic paths, compact your gravel in layers rather than all at once—this creates a much more stable surface that won't rut under vehicle tyres. One of gravel's key benefits is its permeability, allowing rainwater to drain through rather than running off, which makes it an excellent choice for areas where you want to reduce stormwater issues. For any driveway application, always install gravel over a properly compacted roadbase layer—the gravel alone won't provide the structural support vehicles require.</p>
+
+        <h3>Gravel vs Roadbase</h3>
+        <p>While both are crushed stone, gravel and roadbase serve different purposes. Gravel is typically single-sized decorative stone for surface applications, while roadbase contains a graded mix of particle sizes specifically engineered to compact into a solid structural layer. For proper driveway construction, you need both—roadbase underneath to provide strength and stability, with gravel on top for the finished surface.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-section__title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How much gravel do I need for my driveway?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Calculate driveway gravel by measuring length × width × depth (in metres). For a 10m × 3m driveway at 75mm depth: 10 × 3 × 0.075 = 2.25 cubic metres. Use our calculator to get instant results including weight conversions for ordering.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How deep should gravel be for a driveway?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>For residential driveways in Australia, gravel should be 75-100mm deep over a compacted roadbase layer. For light traffic paths, 50mm is sufficient. Always compact gravel in layers of no more than 75mm for best results.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              What's the difference between blue metal and crushed granite?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Blue metal (1.5 t/m³) is crushed basalt/bluestone, dark grey in colour, commonly used for driveways and drainage. Crushed granite (1.4 t/m³) is lighter in colour with gold/brown tones, popular for decorative paths and garden features.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              How many tonnes of gravel in a cubic metre?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>Gravel typically weighs 1.4-1.6 tonnes per cubic metre depending on the type. Blue metal is approximately 1.5 t/m³, river pebbles are 1.6 t/m³, and crushed granite is 1.4 t/m³. Our calculator provides automatic weight conversions.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question">
+              Can I use decorative gravel for driveways?
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-item__answer">
+              <p>While decorative pebbles look attractive, they're not ideal for driveways as they can scatter and don't compact well. For driveways, use angular crushed rock like blue metal or granite that locks together. Save decorative pebbles for garden beds and paths.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Calculators -->
+    <section class="related-section">
+      <div class="container">
+        <h2 class="related-section__title">You Might Also Need</h2>
+        <div class="related-grid">
+          <a href="/roadbase-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--roadbase"></div>
+            <h3 class="material-card__title">Road Base Calculator</h3>
+            <p class="material-card__desc">Driveways &amp; foundations</p>
+          </a>
+          <a href="/sand-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--sand"></div>
+            <h3 class="material-card__title">Sand Calculator</h3>
+            <p class="material-card__desc">Paving &amp; construction</p>
+          </a>
+          <a href="/mulch-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--mulch"></div>
+            <h3 class="material-card__title">Mulch Calculator</h3>
+            <p class="material-card__desc">Garden beds &amp; paths</p>
+          </a>
+          <a href="/soil-calculator/" class="material-card">
+            <div class="material-card__icon material-card__icon--soil"></div>
+            <h3 class="material-card__title">Soil Calculator</h3>
+            <p class="material-card__desc">Topsoil &amp; garden mix</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24">
+          <path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/>
+          <path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        LandscapeCalc
+      </a>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="/about/">About</a>
+        <a href="/mulch-calculator/">Mulch</a>
+        <a href="/soil-calculator/">Soil</a>
+        <a href="/gravel-calculator/">Gravel</a>
+        <a href="/sand-calculator/">Sand</a>
+        <a href="/roadbase-calculator/">Road Base</a>
+      </nav>
+      <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
+    </div>
+  </footer>
+
+  <script src="/js/calculator.js"></script>
+</body>
+</html>
