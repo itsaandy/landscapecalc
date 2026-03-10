@@ -1201,6 +1201,63 @@ p:last-child {
 }
 
 /* --------------------------------------------------------------------------
+   Popular Calculations
+   -------------------------------------------------------------------------- */
+.popular-calculations {
+  padding: var(--space-12) 0;
+  background: var(--color-grey-50);
+}
+
+.popular-calculations__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-grey-800);
+  margin-bottom: var(--space-2);
+}
+
+.popular-calculations__desc {
+  color: var(--color-grey-600);
+  margin-bottom: var(--space-6);
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.popular-grid a {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-white);
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--radius-md);
+  color: var(--color-forest-green);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.popular-grid a:hover {
+  border-color: var(--color-forest-green);
+  background: var(--color-cream);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .popular-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
    Utilities
    -------------------------------------------------------------------------- */
 .sr-only {
