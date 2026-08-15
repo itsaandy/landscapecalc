@@ -143,6 +143,13 @@ function initElements() {
   elements.resultTonnes = document.getElementById('result-tonnes');
   elements.resultBags = document.getElementById('result-bags');
   elements.resultBulka = document.getElementById('result-bulka');
+
+  if (elements.resultCard) {
+    elements.resultCard.setAttribute('aria-live', 'polite');
+  }
+  if (elements.collapsibleTrigger) {
+    elements.collapsibleTrigger.setAttribute('aria-expanded', 'false');
+  }
 }
 
 // =============================================================================
@@ -174,7 +181,9 @@ function calculateWeight(volumeM3, density) {
 
 function calculateBags(weightTonnes) {
   // 20kg bags = weight in tonnes × 1000 ÷ 20
-  return Math.ceil(weightTonnes * 1000 / BAG_WEIGHT_KG);
+  // Normalise floating-point noise before rounding up to a whole bag.
+  const exactBags = weightTonnes * 1000 / BAG_WEIGHT_KG;
+  return Math.ceil(Number(exactBags.toFixed(10)));
 }
 
 function calculateBulkaBags(volumeM3) {
@@ -287,6 +296,7 @@ function updateMaterialUI() {
   elements.materialTabs.forEach(tab => {
     const tabMaterial = tab.dataset.material;
     tab.classList.toggle('is-active', tabMaterial === state.material);
+    tab.setAttribute('aria-pressed', String(tabMaterial === state.material));
   });
 
   // Update subtypes
@@ -327,6 +337,7 @@ function updateShapeUI() {
   // Update shape buttons
   elements.shapeBtns.forEach(btn => {
     btn.classList.toggle('is-active', btn.dataset.shape === state.shape);
+    btn.setAttribute('aria-pressed', String(btn.dataset.shape === state.shape));
   });
 
   // Show/hide input groups
@@ -517,6 +528,7 @@ function handleCollapsibleToggle() {
 
   elements.collapsibleTrigger.classList.toggle('is-open', !isOpen);
   elements.collapsibleContent.classList.toggle('is-open', !isOpen);
+  elements.collapsibleTrigger.setAttribute('aria-expanded', String(!isOpen));
 }
 
 // =============================================================================
@@ -667,21 +679,28 @@ function showButtonFeedback(button, message) {
 function initFaqToggles() {
   const faqQuestions = document.querySelectorAll('.faq-item__question');
 
-  faqQuestions.forEach(question => {
+  faqQuestions.forEach((question, index) => {
+    const answer = question.nextElementSibling;
+    const answerId = answer.id || `faq-answer-${index + 1}`;
+    answer.id = answerId;
+    question.setAttribute('aria-controls', answerId);
+    question.setAttribute('aria-expanded', 'false');
+
     question.addEventListener('click', () => {
-      const answer = question.nextElementSibling;
       const isOpen = answer.classList.contains('is-open');
 
       // Close all others
       document.querySelectorAll('.faq-item__answer.is-open').forEach(a => {
         a.classList.remove('is-open');
         a.previousElementSibling.classList.remove('is-open');
+        a.previousElementSibling.setAttribute('aria-expanded', 'false');
       });
 
       // Toggle current
       if (!isOpen) {
         question.classList.add('is-open');
         answer.classList.add('is-open');
+        question.setAttribute('aria-expanded', 'true');
       }
     });
   });
@@ -696,8 +715,14 @@ function initMobileNav() {
   const nav = document.querySelector('.mobile-nav');
 
   if (toggle && nav) {
+    const navId = nav.id || 'mobile-navigation';
+    nav.id = navId;
+    toggle.setAttribute('aria-controls', navId);
+    toggle.setAttribute('aria-expanded', 'false');
+
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('is-open');
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     });
   }
 }
