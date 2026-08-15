@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage LandscapeCalc Growth"
+  short_description: "Evidence-led SEO operations for LandscapeCalc"
+  default_prompt: "Use $manage-landscapecalc-growth to analyse current search performance and make validated improvements."
