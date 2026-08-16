@@ -42,6 +42,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://landscapecalc.com.au/privacy/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!-- Mulch Long-Tail Pages (12) -->
   <url>
     <loc>https://landscapecalc.com.au/mulch-calculator/10-square-metres/</loc>
