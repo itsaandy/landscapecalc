@@ -19,6 +19,7 @@ Use `$manage-landscapecalc-growth` for Search Console or Analytics reviews, SEO 
 - Search Console: `sc-domain:landscapecalc.com.au`
 - Analytics property: `527618923`
 - Measurement ID embedded in HTML: `G-MSK7HS9TW3`
+- AdSense publisher ID embedded in HTML: `ca-pub-2538773959178920`
 
 Do not alter tracking IDs or credentials unless the owner explicitly requests it.
 
