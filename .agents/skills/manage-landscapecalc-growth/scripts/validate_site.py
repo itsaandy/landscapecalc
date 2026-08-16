@@ -15,6 +15,15 @@ from urllib.parse import unquote, urlparse
 DOMAIN = "https://landscapecalc.com.au"
 HOST = "landscapecalc.com.au"
 GA_ID = "G-MSK7HS9TW3"
+PRIVACY_PAGE = "privacy/index.html"
+PRIVACY_FORBIDDEN_MARKERS = (
+    GA_ID,
+    "googletagmanager.com",
+    "googlesyndication.com",
+    "adsbygoogle",
+    "googlefc",
+    "fundingchoices",
+)
 MATERIALS = {
     "mulch": {"wood-chip", "bark", "pine-bark", "cypress", "eucalyptus", "hardwood", "sugar-cane"},
     "soil": {"topsoil", "garden-mix", "veggie-mix", "turf-underlay", "sandy-loam", "clay-soil", "potting-mix"},
@@ -185,7 +194,12 @@ def main() -> int:
             if canonical != expected:
                 errors.append(f"{relative}: canonical {canonical!r} should be {expected!r}")
 
-        if GA_ID not in source:
+        if relative == PRIVACY_PAGE:
+            lower_source = source.lower()
+            for marker in PRIVACY_FORBIDDEN_MARKERS:
+                if marker.lower() in lower_source:
+                    errors.append(f"{relative}: privacy page contains forbidden tag marker {marker!r}")
+        elif GA_ID not in source:
             errors.append(f"{relative}: missing GA measurement ID {GA_ID}")
         if '/js/calculator.js' not in source:
             errors.append(f"{relative}: missing shared calculator script")
@@ -229,7 +243,7 @@ def main() -> int:
 
     print(
         f"PASS: {len(pages)} pages; titles, descriptions, H1s, canonicals, "
-        "JSON-LD, tracking, presets, internal targets, and sitemap parity are valid."
+        "JSON-LD, tracking/privacy exclusions, presets, internal targets, and sitemap parity are valid."
     )
     return 0
 
