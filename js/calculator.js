@@ -302,7 +302,7 @@ function updateMaterialUI() {
   // Update subtypes
   if (elements.subtypeSelect) {
     elements.subtypeSelect.innerHTML = material.subtypes
-      .map(s => `<option value="${s.id}">${s.name} (${s.density} t/m³)</option>`)
+      .map(s => `<option value="${s.id}">${s.name}</option>`)
       .join('');
     elements.subtypeSelect.value = state.subtype;
   }

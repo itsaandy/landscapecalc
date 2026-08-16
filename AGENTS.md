@@ -31,7 +31,7 @@ Do not alter tracking IDs or credentials unless the owner explicitly requests it
 
 ## Content and product invariants
 
-- Use Australian English, metric measurements, cubic metres, tonnes, kilograms, and clear estimator disclaimers.
+- Use Australian English, metric measurements, cubic metres, tonnes, kilograms, and clear estimator disclaimers. Keep cubic metres as the primary ordering result; treat weight as a secondary estimate. Spell out "tonnes" and "tonnes per cubic metre" in user-facing copy instead of abbreviating them as "t" or "t/m³".
 - Preserve trailing-slash routes, root-relative local assets, absolute HTTPS canonicals, useful breadcrumbs, and internal links.
 - Keep one useful H1, a unique title and description, canonical/OG consistency, valid JSON-LD, and visible FAQ answers that agree with FAQ schema.
 - Preserve the `MATERIALS` category/subtype IDs and each page's body-data contract. A preset must resolve to a supported subtype in its selected material.
