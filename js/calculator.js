@@ -759,7 +759,8 @@ function initFeedbackForm() {
         <input type="hidden" name="entry.364081786">
         <div class="feedback-form__field">
           <label for="feedback-email">Email</label>
-          <input id="feedback-email" name="entry.1318552341" type="email" autocomplete="email" inputmode="email" required>
+          <input id="feedback-email" name="entry.1318552341" type="email" autocomplete="email" inputmode="email" aria-describedby="feedback-email-validation" required>
+          <p id="feedback-email-validation" class="feedback-form__validation" aria-live="polite"></p>
         </div>
         <div class="feedback-form__field">
           <label for="feedback-message">Feedback</label>
@@ -781,6 +782,8 @@ function initFeedbackForm() {
   const dialog = backdrop.querySelector('.feedback-dialog');
   const form = backdrop.querySelector('.feedback-form');
   const sourceInput = form.querySelector('input[name="entry.364081786"]');
+  const emailInput = form.querySelector('#feedback-email');
+  const emailValidation = form.querySelector('#feedback-email-validation');
   const closeButton = backdrop.querySelector('.feedback-dialog__close');
   const submitButton = form.querySelector('.feedback-form__submit');
   const status = form.querySelector('.feedback-form__status');
@@ -792,6 +795,41 @@ function initFeedbackForm() {
 
   sourceInput.value = sourceWebsite;
 
+  const clearEmailValidation = () => {
+    emailInput.classList.remove('is-valid', 'is-invalid');
+    emailValidation.classList.remove('is-valid', 'is-invalid');
+    emailValidation.textContent = '';
+  };
+
+  const validateEmail = (showEmpty = false) => {
+    const value = emailInput.value.trim();
+    clearEmailValidation();
+
+    if (!value) {
+      if (showEmpty) {
+        emailInput.classList.add('is-invalid');
+        emailValidation.classList.add('is-invalid');
+        emailValidation.textContent = 'Enter your email address.';
+      }
+      return false;
+    }
+
+    if (!emailInput.validity.valid) {
+      emailInput.classList.add('is-invalid');
+      emailValidation.classList.add('is-invalid');
+      emailValidation.textContent = 'Enter a valid email address, like name@example.com.';
+      return false;
+    }
+
+    emailInput.classList.add('is-valid');
+    emailValidation.classList.add('is-valid');
+    emailValidation.textContent = 'Email looks good.';
+    return true;
+  };
+
+  emailInput.addEventListener('input', () => validateEmail(false));
+  emailInput.addEventListener('blur', () => validateEmail(true));
+
   const focusableElements = () => Array.from(dialog.querySelectorAll(
     'button:not([disabled]), input:not([disabled]):not([type="hidden"]), textarea:not([disabled]), a[href]:not([hidden])'
   )).filter(element => element.offsetParent !== null);
@@ -800,6 +838,7 @@ function initFeedbackForm() {
     lastTrigger = trigger;
     if (completed) {
       form.reset();
+      clearEmailValidation();
       sourceInput.value = sourceWebsite;
       form.hidden = false;
       success.hidden = true;
@@ -865,6 +904,7 @@ function initFeedbackForm() {
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
+    validateEmail(true);
     if (!form.reportValidity()) return;
 
     submitButton.disabled = true;
