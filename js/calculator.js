@@ -423,10 +423,12 @@ function handleDepthPreset(depth) {
     elements.depthInput.classList.remove('is-error');
   }
   updateDepthChips();
+  hideResult();
 }
 
 function handleCalculate() {
   if (!validateAllInputs()) {
+    hideResult();
     return;
   }
 
@@ -1092,6 +1094,7 @@ function init() {
         if (key === 'depth') {
           updateDepthChips();
         }
+        hideResult();
       });
     }
   });
