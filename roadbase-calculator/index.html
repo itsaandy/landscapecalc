@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Road Base Calculator – DGB20 &amp; Crusher Dust | LandscapeCalc</title>
-  <meta name="description" content="Calculate road base, DGB20 and crusher dust for Australian driveways. Get cubic metres, tonnes and 20kg bags using material density estimates.">
+  <meta name="description" content="Estimate road base, DGB20 and crusher dust in cubic metres from area and depth, with transparent indicative weight conversions.">
   <meta name="keywords" content="road base calculator, DGB20 calculator, crusher dust calculator, driveway base, FCR calculator, cubic metres calculator, Australia">
   <link rel="canonical" href="https://landscapecalc.com.au/roadbase-calculator/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Road Base Calculator – DGB20 &amp; Crusher Dust | LandscapeCalc">
-  <meta property="og:description" content="Calculate road base, DGB20 and crusher dust in cubic metres, tonnes and 20kg bags.">
+  <meta property="og:description" content="Estimate road base, DGB20 and crusher dust in cubic metres, with indicative weight conversions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://landscapecalc.com.au/roadbase-calculator/">
   <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
@@ -20,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Road Base Calculator – DGB20 &amp; Crusher Dust | LandscapeCalc">
-  <meta name="twitter:description" content="Calculate road base, DGB20 and crusher dust in cubic metres, tonnes and bags.">
+  <meta name="twitter:description" content="Estimate road base, DGB20 and crusher dust in cubic metres, with indicative weight conversions.">
   <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
 
   <!-- Favicon -->
@@ -76,61 +77,13 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much road base do I need for a driveway?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Calculate road base by measuring length × width × depth. For a 10m × 3m driveway at 150mm depth: 10 × 3 × 0.15 = 4.5 cubic metres. At 1.8 tonnes per cubic metre density, that's approximately 8.1 tonnes of DGB20 road base."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How deep should road base be for a driveway?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Australia, residential driveways typically need 100-150mm of compacted road base. For heavy vehicles or soft subgrade, increase to 200mm. Compact in 75mm layers, with each layer reaching 95%+ compaction before adding the next."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the difference between DGB20 and DGB10?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "DGB20 contains particles up to 20mm and is the standard road base for driveways and paths. DGB10 has smaller particles (up to 10mm) and compacts more tightly, making it ideal for under pavers and finer finishes. Both have a density of approximately 1.8 tonnes per cubic metre."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many tonnes of road base in a cubic metre?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Road base weighs approximately 1.6-1.8 tonnes per cubic metre depending on the type. DGB20 and DGB10 are typically 1.8 tonnes per cubic metre, while crusher dust is lighter at 1.6 tonnes per cubic metre. Our calculator provides automatic weight conversions for all types."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use crusher dust instead of road base?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Crusher dust (fine crushed rock) is best as a surface layer or under pavers, not as structural road base. It lacks the larger aggregate that gives road base its load-bearing capacity. For driveways, use proper graded road base (DGB20) for the base layer."
-        }
-      }
-    ]
-  }
-  </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Road Base Calculator - LandscapeCalc",
-    "description": "Calculate how much road base you need for driveways and construction in cubic metres, tonnes, and bags.",
+    "description": "Estimate road base in cubic metres from area and depth, with indicative weight conversions.",
     "url": "https://landscapecalc.com.au/roadbase-calculator/",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
@@ -196,7 +149,7 @@
     <section class="page-header">
       <div class="container">
         <h1>Road Base Calculator for DGB20 &amp; Crusher Dust</h1>
-        <p>Calculate exactly how much road base, DGB20, or crusher dust you need for your driveway, paving base, or construction project. Get results in cubic metres, tonnes, and bags.</p>
+        <p>Estimate road base, DGB20 or crusher dust volume for your project. See cubic metres first, plus indicative weight and ordering equivalents.</p>
       </div>
     </section>
 
@@ -296,7 +249,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="150">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 100-200mm for driveways and paths</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
 
           <!-- Buttons -->
@@ -319,11 +272,11 @@
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bags">0</div>
-                <div class="result-card__item-label">20kg Bags</div>
+                <div class="result-card__item-label">20 kg equivalents</div>
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bulka">0</div>
-                <div class="result-card__item-label">Bulka Bags</div>
+                <div class="result-card__item-label">1 m³ bulk-bag equivalents</div>
               </div>
             </div>
             <div class="result-card__actions">
@@ -357,119 +310,29 @@
             </button>
             <div class="collapsible__content">
               <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
-              <p><strong>Weight:</strong> Volume × road base density. DGB20 has a density of 1.8 tonnes per cubic metre, while crusher dust is lighter at 1.6 tonnes per cubic metre.</p>
-              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough material.</p>
-              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+              <p><strong>Weight:</strong> Volume × the selected indicative density. Confirm the exact product conversion with the supplier; see <a href="/methodology/">Methodology &amp; Sources</a>.</p>
+              <p><strong>20 kg equivalent:</strong> Estimated kilograms ÷ 20, rounded up. This is a mass comparison, not a retail pack count.</p>
+              <p><strong>1 m³ bulk-bag equivalent:</strong> Volume ÷ 1.0, rounded up. Confirm the supplier's actual bulk-bag size.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEO Content Section -->
+    <!-- Maintained calculator guidance -->
     <section class="content-section">
       <div class="container">
-        <h2>How to Calculate Road Base for Your Project</h2>
-        <p>Calculating the correct amount of road base is essential for any driveway, pathway, or construction project in Australia. Road base provides the crucial structural layer that supports traffic loads and ensures long-lasting surfaces. Our calculator helps you determine exactly how much you need.</p>
+        <h2>Calculate Road Base Volume Transparently</h2>
+        <p>Enter the measured shape, dimensions and specified depth. LandscapeCalc calculates uncompacted geometric volume and does not add a hidden compaction, settlement or waste allowance.</p>
 
-        <h3>Understanding Road Base Measurements</h3>
-        <p>In Australia, road base is sold by the tonne or cubic metre. Since road base is dense and heavy (up to 1.8 tonnes per cubic metre), most suppliers price by weight. Our calculator provides both measurements, making it easy to get accurate quotes and order the right amount.</p>
+        <h3>Material Names Are Not Universal Specifications</h3>
+        <p>DGB20, DGB10, FCR, recycled road base and crusher dust can differ between suppliers and jurisdictions. The dropdown identifies calculator coefficients only; it does not certify grading, compliance or suitability for a project.</p>
 
-        <h3>Choosing the Right Road Base Depth</h3>
-        <p>For pedestrian paths and light-use areas where vehicles won't travel, 100mm of compacted road base provides sufficient support. Standard residential driveways and parking areas perform best with 150mm of properly compacted material—this depth handles regular car traffic without issues. If you're expecting heavy vehicles like delivery trucks or caravans, or if your subgrade soil is soft clay or poorly draining, increase to 200mm or more to prevent rutting and failure over time.</p>
+        <h3>Loose and Compacted Quantities Can Differ</h3>
+        <p>Compaction changes the relationship between measured finished volume and delivered loose material. Ask the supplier or project designer which depth, compaction factor and product specification to use, then enter those project requirements into the calculator.</p>
 
-        <h3>Types of Road Base Available in Australia</h3>
-        <p>DGB20 at 1.8 tonnes per cubic metre is Australia's most widely used road base, containing a carefully graded mix of particles from fine dust up to 20mm stones. This grading is what gives it structural strength—the different particle sizes lock together during compaction to create a solid foundation for driveways, paths, and building slabs. DGB10 at the same density offers finer grading with maximum particles of 10mm, making it better suited for thinner applications or where you need tighter compaction under pavers.</p>
-        <p>FCR (Fine Crushed Rock) at 1.7 tonnes per cubic metre contains even smaller particles than DGB10 and is commonly used as a finishing layer or directly under pavers where a smoother surface is required. For environmentally conscious projects, recycled road base at 1.6 tonnes per cubic metre is manufactured from crushed concrete and brick, offering good performance for non-structural applications at a lower cost. Quarry rubble at 1.8 tonnes per cubic metre is unprocessed material straight from the quarry, suitable for bulk filling and rural driveways where precise grading isn't critical. Crusher dust at 1.6 tonnes per cubic metre is the fine material produced during crushing operations—useful as a surface layer or paver bedding but not suitable as a structural base layer on its own.</p>
-
-        <h3>Proper Road Base Installation</h3>
-        <p>Successful road base installation requires attention to technique at every stage. Begin by excavating to the correct depth, remembering to account for both your base layer thickness and whatever surface material will go on top. Before adding any road base, compact your existing subgrade soil thoroughly—a weak foundation will cause problems regardless of how well you install the layers above.</p>
-        <p>When spreading road base, work in layers no thicker than 75mm and compact each layer fully before adding the next. Each layer should reach 95% or greater compaction density, which typically requires a vibrating plate compactor for paths and a roller for larger areas. Adding a light spray of water during compaction helps particles bind together and achieve maximum density. Finally, ensure you create a 1-2% cross-fall so water drains away from buildings and doesn't pool on the surface.</p>
-
-        <h3>Road Base vs Gravel</h3>
-        <p>Despite their similar appearance, road base and gravel serve fundamentally different purposes. Road base is engineered with a specific particle size distribution—called grading—that allows particles to lock together during compaction, creating a solid structural layer capable of supporting heavy loads. Gravel, by contrast, typically consists of single-sized decorative stones that don't compact or interlock. For proper driveway construction, always use road base as your structural foundation, then apply gravel, concrete, or asphalt as the finished surface.</p>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <h2 class="faq-section__title">Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How much road base do I need for a driveway?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Calculate road base by measuring length × width × depth. For a 10m × 3m driveway at 150mm depth: 10 × 3 × 0.15 = 4.5 cubic metres. At 1.8 tonnes per cubic metre density, that's approximately 8.1 tonnes of DGB20 road base.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How deep should road base be for a driveway?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>In Australia, residential driveways typically need 100-150mm of compacted road base. For heavy vehicles or soft subgrade, increase to 200mm. Compact in 75mm layers, with each layer reaching 95%+ compaction before adding the next.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              What's the difference between DGB20 and DGB10?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>DGB20 contains particles up to 20mm and is the standard road base for driveways and paths. DGB10 has smaller particles (up to 10mm) and compacts more tightly, making it ideal for under pavers and finer finishes. Both have a density of approximately 1.8 tonnes per cubic metre.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How many tonnes of road base in a cubic metre?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Road base weighs approximately 1.6-1.8 tonnes per cubic metre depending on the type. DGB20 and DGB10 are typically 1.8 tonnes per cubic metre, while crusher dust is lighter at 1.6 tonnes per cubic metre. Our calculator provides automatic weight conversions for all types.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              Can I use crusher dust instead of road base?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Crusher dust (fine crushed rock) is best as a surface layer or under pavers, not as structural road base. It lacks the larger aggregate that gives road base its load-bearing capacity. For driveways, use proper graded road base (DGB20) for the base layer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Popular Calculations -->
-    <section class="popular-calculations">
-      <div class="container">
-        <h2 class="popular-calculations__title">Popular Road Base Calculations</h2>
-        <p class="popular-calculations__desc">Quick answers for common road base projects:</p>
-        <div class="popular-grid">
-          <a href="/roadbase-calculator/10-square-metres/">Roadbase for 10 Square Metres</a>
-          <a href="/roadbase-calculator/driveway/">Roadbase for a Driveway</a>
-          <a href="/roadbase-calculator/carport/">Roadbase for a Carport</a>
-          <a href="/roadbase-calculator/parking-area/">Roadbase for a Parking Area</a>
-          <a href="/roadbase-calculator/garden-path/">Roadbase for a Garden Path</a>
-          <a href="/roadbase-calculator/retaining-wall/">Roadbase Behind a Retaining Wall</a>
-          <a href="/roadbase-calculator/shed-base/">Roadbase for a Shed Base</a>
-          <a href="/roadbase-calculator/under-pavers/">Roadbase Under Pavers</a>
-        </div>
+        <h3>Use Weight as a Secondary Estimate</h3>
+        <p>The tonnes result uses an indicative density and must not be used to determine a vehicle or trailer's legal load. Confirm the exact supplier conversion and delivery requirements before ordering. See the <a href="/methodology/">Methodology &amp; Sources page</a> for the complete calculation basis.</p>
       </div>
     </section>
 
@@ -517,6 +380,8 @@
       </a>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="/about/">About</a>
+        <a href="/methodology/">Methodology &amp; Sources</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a>
         <a href="/mulch-calculator/">Mulch</a>

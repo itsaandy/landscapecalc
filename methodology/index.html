@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Methodology &amp; Sources | LandscapeCalc</title>
+  <meta name="description" content="See LandscapeCalc's volume formulas, material-density assumptions, rounding rules, source checks and limitations.">
+  <link rel="canonical" href="https://landscapecalc.com.au/methodology/">
+  <meta property="og:title" content="LandscapeCalc Methodology &amp; Sources">
+  <meta property="og:description" content="How LandscapeCalc calculates volume and indicative landscape-material weights.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://landscapecalc.com.au/methodology/">
+  <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:site_name" content="LandscapeCalc">
+  <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2D5A3D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSK7HS9TW3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MSK7HS9TW3');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "LandscapeCalc Methodology and Sources",
+    "url": "https://landscapecalc.com.au/methodology/",
+    "description": "LandscapeCalc volume formulas, material-density assumptions, rounding rules, source checks and limitations."
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>
+        LandscapeCalc
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a><a href="/about/">About</a>
+      </nav>
+      <button type="button" class="header__mobile-toggle" aria-label="Toggle menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" aria-label="Mobile navigation"><a href="/mulch-calculator/">Mulch Calculator</a><a href="/soil-calculator/">Soil Calculator</a><a href="/gravel-calculator/">Gravel Calculator</a><a href="/sand-calculator/">Sand Calculator</a><a href="/roadbase-calculator/">Road Base Calculator</a><a href="/about/">About</a></nav>
+
+  <main>
+    <nav class="breadcrumb"><div class="container"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li><li class="breadcrumb__item"><span class="breadcrumb__current">Methodology &amp; Sources</span></li></ol></div></nav>
+    <section class="page-header"><div class="container"><h1>Methodology &amp; Sources</h1><p>How the calculator turns dimensions into planning estimates.</p></div></section>
+    <div class="about-content">
+      <p><strong>Last reviewed:</strong> 3 September 2026</p>
+
+      <h2>Volume formulas</h2>
+      <p>All dimensions are converted to metres. Depth entered in millimetres is divided by 1,000 before it is used.</p>
+      <ul>
+        <li><strong>Rectangle:</strong> length × width × depth.</li>
+        <li><strong>Circle:</strong> π × radius² × depth.</li>
+        <li><strong>Triangle:</strong> ½ × base × height × depth.</li>
+      </ul>
+      <p>The resulting cubic metres are the primary result. The calculator does not add a hidden waste, settlement or compaction allowance.</p>
+
+      <h2>Indicative weight coefficients</h2>
+      <p>Estimated tonnes equal cubic metres multiplied by the selected coefficient. These are planning defaults, not certified measurements of a product:</p>
+      <ul>
+        <li><strong>Mulch:</strong> sugar cane 0.20; pine bark 0.30; bark 0.35; wood chip and eucalyptus 0.40; cypress 0.45; hardwood 0.50 tonnes per cubic metre.</li>
+        <li><strong>Soil:</strong> potting mix 0.60; veggie mix 0.90; garden mix 1.00; topsoil 1.10; turf underlay 1.20; sandy loam 1.30; clay soil 1.50 tonnes per cubic metre.</li>
+        <li><strong>Gravel:</strong> crushed granite, crushed sandstone and recycled aggregate 1.40; blue metal, limestone and decorative pebbles 1.50; river pebbles 1.60 tonnes per cubic metre.</li>
+        <li><strong>Sand:</strong> most listed sands 1.50; paving sand 1.60 tonnes per cubic metre.</li>
+        <li><strong>Road base:</strong> recycled road base and crusher dust 1.60; FCR 1.70; DGB10, DGB20 and quarry rubble 1.80 tonnes per cubic metre.</li>
+      </ul>
+      <p>As an Australian supplier cross-check, Australian Native Landscapes publishes indicative loose values including 0.3 tonnes per cubic metre for bark, 0.4 for woodchip, 1.2 for garden mix, 1.4 for topsoil, 1.3–1.5 for its listed sands, 1.45 for blue metal and 1.75 for road base. Its table also warns that grade, mineral content, moisture and source change density. See <a href="https://anlscape.com.au/faq-landscape-product-weight-volume" target="_blank" rel="noopener noreferrer">ANL's landscape product weights and volumes</a>.</p>
+      <p>LandscapeCalc intentionally exposes its coefficients because a local supplier's conversion should replace a default whenever it is available. A difference between this calculator and a supplier is not an ordering tolerance: use the supplier's figure for that product.</p>
+
+      <h2>Ordering equivalents and rounding</h2>
+      <p>The 20 kg equivalent divides estimated weight in kilograms by 20 and rounds up to a whole unit. It is a mass comparison only; landscape products may instead be sold loose, by volume or in bags measured in litres.</p>
+      <p>The 1 m³ bulk-bag equivalent divides volume by one cubic metre and rounds up. Suppliers offer different bulk-bag sizes and weight limits, so this is not a retail pack count.</p>
+      <p>Volume and weight are displayed to two decimal places. The unrounded values are used before whole-unit equivalents are rounded up.</p>
+
+      <h2>Depth and project requirements</h2>
+      <p>The depth buttons are editable starting points, not design advice. Required depth can depend on the product, intended use, subgrade, drainage, compaction and project specification. Enter the depth provided by the relevant supplier, designer, installer or approved project documentation.</p>
+
+      <h2>Known limitations</h2>
+      <ul>
+        <li>Natural and recycled products vary between sources and batches.</li>
+        <li>Moisture and compaction can materially change weight and delivered volume.</li>
+        <li>The calculator does not determine product suitability, structural requirements, transport capacity or legal load limits.</li>
+        <li>Bulk deliveries and bags should be ordered using the supplier's current specification and sale unit.</li>
+      </ul>
+      <p>If a formula, coefficient or source needs correction, please use the <a href="/contact/">Contact page</a>.</p>
+    </div>
+  </main>
+
+  <a class="feedback-fab" href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a>
+  <footer class="footer"><div class="container footer__inner">
+    <a href="/" class="footer__logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>LandscapeCalc</a>
+    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/methodology/">Methodology &amp; Sources</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
+    <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
+  </div></footer>
+  <script src="/js/calculator.js"></script>
+</body>
+</html>

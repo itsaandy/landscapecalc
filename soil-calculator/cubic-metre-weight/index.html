@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Soil Weight per m³ – kg &amp; Tonnes Calculator | LandscapeCalc</title>
-  <meta name="description" content="One cubic metre of standard topsoil weighs about 1,100kg (1.1 tonnes). Compare soil densities and calculate volume, weight and 20kg bags.">
+  <meta name="description" content="Using LandscapeCalc's topsoil planning coefficient, one cubic metre is estimated at 1,100kg. Compare soil types and verify the supplier conversion.">
   <link rel="canonical" href="https://landscapecalc.com.au/soil-calculator/cubic-metre-weight/">
 
   <meta property="og:title" content="Soil Weight per m³ – kg &amp; Tonnes Calculator | LandscapeCalc">
-  <meta property="og:description" content="One cubic metre of standard topsoil weighs about 1,100kg (1.1 tonnes). Compare soil types and calculate your total.">
+  <meta property="og:description" content="LandscapeCalc estimates 1m³ of topsoil at 1,100kg using its planning coefficient. Compare soil types and confirm the selected supplier's figure.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://landscapecalc.com.au/soil-calculator/cubic-metre-weight/">
   <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
@@ -34,11 +35,6 @@
 
     gtag('config', 'G-MSK7HS9TW3');
   </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2538773959178920"
-    crossorigin="anonymous"></script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,7 +86,7 @@
 
     <section class="page-header"><div class="container">
       <h1>Soil Weight per Cubic Metre (kg &amp; Tonnes)</h1>
-      <p>One cubic metre (1m³) of standard topsoil weighs about 1,100kg, or 1.1 tonnes. Select a soil type below to calculate your total.</p>
+      <p>Using LandscapeCalc's topsoil planning coefficient, one cubic metre (1m³) displays as 1,100kg, or 1.1 tonnes. Select a soil type below and confirm the result with its supplier.</p>
     </div></section>
 
     <div class="calculator-wrapper">
@@ -130,7 +126,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 150-300mm for garden beds</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
           <div class="btn-group">
             <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
@@ -140,8 +136,8 @@
             <div class="result-card__primary"><span class="result-card__value" id="result-volume">0.00</span><span class="result-card__unit">m³</span><p class="result-card__label">Total Volume</p></div>
             <div class="result-card__secondary">
               <div class="result-card__item"><div class="result-card__item-value" id="result-tonnes">0.00</div><div class="result-card__item-label">Estimated Weight (tonnes)</div></div>
-              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20kg Bags</div></div>
-              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">Bulka Bags</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20 kg equivalents</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">1 m³ bulk-bag equivalents</div></div>
             </div>
             <div class="result-card__actions">
               <button type="button" id="copy-btn" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy Result</button>
@@ -153,24 +149,22 @@
     </div>
 
     <section class="content-section"><div class="container">
-      <h2>Understanding Soil Weight Per Cubic Metre</h2>
-      <p>Knowing the weight of soil is essential for planning deliveries and determining whether you can pick up material yourself with a trailer. Standard topsoil weighs approximately 1.1 tonnes per cubic metre, though this can vary depending on moisture content and composition. Wet soil weighs significantly more than dry soil, so deliveries after rain can exceed these estimates.</p>
+      <h2>What the Soil Weight Result Means</h2>
+      <p>The page starts with a 1m × 1m area at 1,000mm depth, which is exactly one cubic metre. With topsoil selected, LandscapeCalc multiplies that volume by its 1.10 tonnes-per-cubic-metre planning coefficient to display 1.10 tonnes, or 1,100 kilograms.</p>
 
-      <p>The calculator above shows that one cubic metre of topsoil comes to approximately 1.1 tonnes (1,100 kilograms). This weight makes soil one of the heavier landscape materials you'll work with, exceeded only by aggregates like gravel and roadbase.</p>
+      <h3>It Is a Planning Coefficient, Not a Product Specification</h3>
+      <p>Soil density changes with composition, screening, organic content, moisture and compaction. For comparison, Australian Native Landscapes publishes indicative loose values of 1.4 tonnes per cubic metre for topsoil and 1.2 for garden mix, while warning that actual products vary. LandscapeCalc's complete coefficient list and source policy are documented on the <a href="/methodology/">Methodology &amp; Sources page</a>.</p>
 
-      <h3>Weight Variations by Soil Type</h3>
-      <p>Different soil products have different densities. Standard topsoil typically ranges from 1.0 to 1.3 tonnes per cubic metre depending on clay content and moisture. Garden mix, which contains more organic matter, tends to be slightly lighter at around 1.0 to 1.1 tonnes per cubic metre. Compost and premium veggie mixes can be lighter still, sometimes as low as 0.8 tonnes per cubic metre due to their high organic content and looser structure.</p>
+      <h3>How to Use the Estimate</h3>
+      <p>Order bulk soil primarily from the calculated cubic metres. Use the weight only for an early delivery discussion, then replace it with the selected supplier's current conversion. Do not use this estimate to decide whether a vehicle or trailer can legally or safely carry the load.</p>
 
-      <h3>Trailer Capacity Planning</h3>
-      <p>If you're planning to pick up soil yourself, understanding weight limits is crucial for safety and legality. A standard box trailer rated at 750kg can safely carry about half a cubic metre of dry topsoil. A tandem trailer rated at 2 tonnes can handle approximately 1.5 cubic metres. Always check your trailer's weight rating and remember that wet soil can be 20-30% heavier than these estimates suggest. Overloading trailers is dangerous and can result in fines or accidents.</p>
-
-      <p>Need to calculate soil for a specific garden area? Use our main <a href="/soil-calculator/">soil calculator</a> to enter your dimensions and get volume and weight figures.</p>
+      <p>For a different area or depth, use the main <a href="/soil-calculator/">soil calculator</a> and enter the dimensions from your project requirements.</p>
     </div></section>
 
     <section class="related-section"><div class="container">
       <h2 class="related-section__title">Related Calculations</h2>
       <div class="related-grid">
-        <a href="/soil-calculator/raised-garden-bed/" class="material-card"><div class="material-card__icon material-card__icon--soil"></div><h3 class="material-card__title">Raised Garden Bed</h3><p class="material-card__desc">Standard bed soil</p></a>
+        <a href="/soil-calculator/" class="material-card"><div class="material-card__icon material-card__icon--soil"></div><h3 class="material-card__title">Soil Calculator</h3><p class="material-card__desc">Estimate soil volume</p></a>
         <a href="/gravel-calculator/cubic-metre-weight/" class="material-card"><div class="material-card__icon material-card__icon--gravel"></div><h3 class="material-card__title">Gravel Weight</h3><p class="material-card__desc">Gravel per m³</p></a>
         <a href="/sand-calculator/cubic-metre-weight/" class="material-card"><div class="material-card__icon material-card__icon--sand"></div><h3 class="material-card__title">Sand Weight</h3><p class="material-card__desc">Sand per m³</p></a>
       </div>
@@ -181,7 +175,7 @@
 
   <footer class="footer"><div class="container footer__inner">
     <a href="/" class="footer__logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>LandscapeCalc</a>
-    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
+    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/methodology/">Methodology &amp; Sources</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
     <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
   </div></footer>
   <script src="/js/calculator.js"></script>

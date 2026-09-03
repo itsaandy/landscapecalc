@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sand Calculator Australia – m³, Tonnes &amp; Bags | LandscapeCalc</title>
-  <meta name="description" content="Calculate how much sand you need from area and depth. Convert washed, brickies, plastering, paving and sandpit sand to cubic metres, tonnes and 20kg bags.">
+  <meta name="robots" content="index, follow">
+  <title>Sand Calculator Australia – Cubic Metres &amp; Weight | LandscapeCalc</title>
+  <meta name="description" content="Estimate washed, brickies, plastering, paving and sandpit sand in cubic metres from area and depth, with indicative weight conversions.">
   <meta name="keywords" content="sand calculator, paving sand calculator, washed sand calculator, brickies sand, plastering sand, cubic metres calculator, Australia">
   <link rel="canonical" href="https://landscapecalc.com.au/sand-calculator/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Sand Calculator Australia | LandscapeCalc">
-  <meta property="og:description" content="Calculate washed, brickies, plastering, paving and sandpit sand in cubic metres, tonnes and 20kg bags.">
+  <meta property="og:description" content="Estimate washed, brickies, paving and sandpit sand in cubic metres, with indicative weight conversions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://landscapecalc.com.au/sand-calculator/">
   <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
@@ -20,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sand Calculator Australia | LandscapeCalc">
-  <meta name="twitter:description" content="Calculate sand from area and depth in cubic metres, tonnes and bags.">
+  <meta name="twitter:description" content="Estimate sand from area and depth in cubic metres, with indicative weight conversions.">
   <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
 
   <!-- Favicon -->
@@ -76,61 +77,13 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much sand do I need for paving?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For paving bedding, calculate sand by measuring length × width × depth. Standard bedding depth is 30-50mm. For a 20m² paved area at 30mm depth: 20 × 0.03 = 0.6 cubic metres. Our calculator provides instant results including tonnage for ordering."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How deep should sand be under pavers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Australia, paving sand bedding should be 20-30mm deep after compaction. Lay sand at 30-40mm uncompacted, then screed level before laying pavers. For jointing sand between pavers, use fine kiln-dried sand swept into joints."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the difference between washed sand and brickies sand?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Washed sand has been cleaned to remove clay and silt, making it ideal for concrete and paving. Brickies sand contains some clay content which makes mortar more workable for bricklaying. Both weigh approximately 1.5 tonnes per cubic metre."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many tonnes of sand in a cubic metre?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sand weighs approximately 1.5-1.6 tonnes per cubic metre depending on moisture content and type. Dry sand is lighter than wet sand. Our calculator uses 1.5 tonnes per cubic metre for most sand types, which is the industry standard for dry, loose sand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much sand do I need for a sandpit?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For sandpits, use washed play sand at 200-300mm depth. Calculate length × width × depth in metres. A 2m × 2m sandpit at 300mm deep needs: 2 × 2 × 0.3 = 1.2 cubic metres. Use only certified play sand that's been washed and tested for safety."
-        }
-      }
-    ]
-  }
-  </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Sand Calculator - LandscapeCalc",
-    "description": "Calculate how much sand you need for paving and construction in cubic metres, tonnes, and bags.",
+    "description": "Estimate sand in cubic metres from area and depth, with indicative weight conversions.",
     "url": "https://landscapecalc.com.au/sand-calculator/",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
@@ -196,7 +149,7 @@
     <section class="page-header">
       <div class="container">
         <h1>Sand Calculator</h1>
-        <p>Calculate exactly how much sand you need for paving, concrete, bricklaying, or sandpits. Get results in cubic metres, tonnes, and bags.</p>
+        <p>Estimate sand volume for paving, bricklaying, sandpits and other projects. See cubic metres first, plus indicative weight and ordering equivalents.</p>
       </div>
     </section>
 
@@ -296,7 +249,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="30">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 30-50mm for paving bedding</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
 
           <!-- Buttons -->
@@ -319,11 +272,11 @@
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bags">0</div>
-                <div class="result-card__item-label">20kg Bags</div>
+                <div class="result-card__item-label">20 kg equivalents</div>
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bulka">0</div>
-                <div class="result-card__item-label">Bulka Bags</div>
+                <div class="result-card__item-label">1 m³ bulk-bag equivalents</div>
               </div>
             </div>
             <div class="result-card__actions">
@@ -357,120 +310,37 @@
             </button>
             <div class="collapsible__content">
               <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
-              <p><strong>Weight:</strong> Volume × sand density. Most sand types have a density of approximately 1.5 tonnes per cubic metre, with paving sand slightly heavier at 1.6 tonnes per cubic metre.</p>
-              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough sand.</p>
-              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+              <p><strong>Weight:</strong> Volume × the selected indicative density. Confirm the exact product conversion with the supplier; see <a href="/methodology/">Methodology &amp; Sources</a>.</p>
+              <p><strong>20 kg equivalent:</strong> Estimated kilograms ÷ 20, rounded up. This is a mass comparison, not a retail pack count.</p>
+              <p><strong>1 m³ bulk-bag equivalent:</strong> Volume ÷ 1.0, rounded up. Confirm the supplier's actual bulk-bag size.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEO Content Section -->
+    <!-- Maintained calculator guidance -->
     <section class="content-section">
       <div class="container">
-        <h2>How to Calculate Sand for Your Project</h2>
-        <p>Calculating the correct amount of sand is essential for any construction, paving, or landscaping project in Australia. Whether you're laying pavers, mixing concrete, building a sandpit, or doing brickwork, our sand calculator provides accurate measurements instantly.</p>
+        <h2>Calculate Sand Volume for a Measured Area</h2>
+        <p>Enter the shape, dimensions and project depth. LandscapeCalc converts millimetres to metres and calculates cubic metres without adding a hidden allowance.</p>
 
-        <h3>Understanding Sand Measurements</h3>
-        <p>In Australia, sand is sold by the cubic metre (m³) or tonne. Since sand is relatively dense, suppliers often price by weight. Our calculator provides both volume and weight conversions, making it easy to compare prices and order accurately.</p>
+        <h3>Choose the Product Before Converting to Weight</h3>
+        <p>Washed, brickies, paving and sandpit products are not interchangeable. Selecting a subtype changes the indicative density used for the secondary weight result; it does not decide which product is suitable.</p>
 
-        <h3>Choosing the Right Sand Depth</h3>
-        <p>For standard paving work, lay your bedding sand at 30mm uncompacted—this will settle to around 20-25mm once you've compacted it and set your pavers. When working with uneven surfaces or when you need more room to adjust paver levels, increase the bedding layer to 50mm. For sandpits, drainage layers, and other non-paving applications, you'll typically want 75mm or more depending on the specific requirements of your project.</p>
+        <h3>Moisture and Grading Matter</h3>
+        <p>Bulk sand weight changes with moisture, mineral composition, grading and compaction. Use cubic metres for the initial volume calculation, then confirm the exact product conversion with the supplier.</p>
 
-        <h3>Types of Sand Available in Australia</h3>
-        <p>Washed sand at 1.5 tonnes per cubic metre is the most versatile option, thoroughly cleaned to remove silt and clay which makes it ideal for concrete mixing, rendering, and general construction work. Brickies sand, also at 1.5 tonnes per cubic metre, deliberately retains some clay content because this improves the workability of mortar—bricklayers specifically request this type for laying bricks and blocks. Plastering sand at 1.5 tonnes per cubic metre is finely graded and washed to produce the smooth finish required for internal and external render work.</p>
-        <p>Paving sand is slightly heavier at 1.6 tonnes per cubic metre due to its coarser, more angular particle shape. This angularity is deliberate—it helps the sand compact firmly and lock together to create a stable bedding layer under pavers. White sand and yellow sand, both at 1.5 tonnes per cubic metre, serve decorative purposes in gardens and pathways, with colour being the main differentiator. For children's play areas, sandpit sand at 1.5 tonnes per cubic metre is washed, tested, and certified safe, meeting Australian safety standards for play equipment.</p>
-
-        <h3>Tips for Using Sand</h3>
-        <p>When laying pavers, screed your sand level using metal rails as guides and a straight edge to create a perfectly flat surface before you begin setting stones. Always compact your paving sand before laying pavers, not after—compacting afterwards can crack pavers and create an uneven surface. Try to keep your sand dry during the project, as wet sand is significantly heavier and much harder to screed smoothly. Order approximately 10% more than your calculations suggest to account for compaction, wastage, and those inevitable small spillages during the job. When mixing concrete, always use clean washed sand free of organic matter, as contamination weakens the final product.</p>
-
-        <h3>Sand for Different Applications</h3>
-        <p>Matching the right sand to your application makes a significant difference to your results. For paving projects, use coarse paving sand to create the bedding layer, then switch to fine kiln-dried jointing sand to fill the gaps between pavers. Concrete requires washed sand mixed with cement and aggregate in the correct proportions for your strength requirements. Bricklaying calls for brickies sand mixed with cement to create mortar with good workability that sticks properly to bricks. For sandpits, never compromise on quality—only use certified play sand that has been washed and tested to ensure it's safe for children.</p>
+        <h3>Pack Sizes Vary</h3>
+        <p>The 20 kg output is a mass equivalent rather than a retail bag count. Check the bag's stated mass or litre volume and coverage before purchase. All formulas, coefficients and rounding rules are published on the <a href="/methodology/">Methodology &amp; Sources page</a>.</p>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <h2 class="faq-section__title">Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How much sand do I need for paving?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>For paving bedding, calculate sand by measuring length × width × depth. Standard bedding depth is 30-50mm. For a 20m² paved area at 30mm depth: 20 × 0.03 = 0.6 cubic metres. Our calculator provides instant results including tonnage for ordering.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How deep should sand be under pavers?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>In Australia, paving sand bedding should be 20-30mm deep after compaction. Lay sand at 30-40mm uncompacted, then screed level before laying pavers. For jointing sand between pavers, use fine kiln-dried sand swept into joints.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              What's the difference between washed sand and brickies sand?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Washed sand has been cleaned to remove clay and silt, making it ideal for concrete and paving. Brickies sand contains some clay content which makes mortar more workable for bricklaying. Both weigh approximately 1.5 tonnes per cubic metre.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How many tonnes of sand in a cubic metre?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Sand weighs approximately 1.5-1.6 tonnes per cubic metre depending on moisture content and type. Dry sand is lighter than wet sand. Our calculator uses 1.5 tonnes per cubic metre for most sand types, which is the industry standard for dry, loose sand.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How much sand do I need for a sandpit?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>For sandpits, use washed play sand at 200-300mm depth. Calculate length × width × depth in metres. A 2m × 2m sandpit at 300mm deep needs: 2 × 2 × 0.3 = 1.2 cubic metres. Use only certified play sand that's been washed and tested for safety.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Popular Calculations -->
-    <section class="popular-calculations">
-      <div class="container">
-        <h2 class="popular-calculations__title">Popular Sand Calculations</h2>
-        <p class="popular-calculations__desc">Quick answers for common sand projects:</p>
-        <div class="popular-grid">
-          <a href="/sand-calculator/10-square-metres/">Sand for 10 Square Metres</a>
-          <a href="/sand-calculator/sandpit/">Sand for a Sandpit</a>
-          <a href="/sand-calculator/round-sandpit/">Sand for a Round Sandpit</a>
-          <a href="/sand-calculator/large-sandpit/">Sand for a Large Sandpit</a>
-          <a href="/sand-calculator/paving-base/">How Much Sand for Paving</a>
-          <a href="/sand-calculator/under-pavers/">Sand Under Pavers</a>
-          <a href="/sand-calculator/levelling/">Sand for Levelling a Yard</a>
-          <a href="/sand-calculator/cubic-metre-weight/">How Much Does a Cubic Metre of Sand Weigh?</a>
-        </div>
-      </div>
-    </section>
+    <section class="popular-calculations"><div class="container">
+      <h2 class="popular-calculations__title">Sand Weight Reference</h2>
+      <p class="popular-calculations__desc">See how the indicative conversion works for a one-cubic-metre starting volume.</p>
+      <div class="popular-grid"><a href="/sand-calculator/cubic-metre-weight/">Sand Weight per Cubic Metre</a><a href="/methodology/">Methodology &amp; Sources</a></div>
+    </div></section>
 
     <!-- Related Calculators -->
     <section class="related-section">
@@ -516,6 +386,8 @@
       </a>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="/about/">About</a>
+        <a href="/methodology/">Methodology &amp; Sources</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a>
         <a href="/mulch-calculator/">Mulch</a>

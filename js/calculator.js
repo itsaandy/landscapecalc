@@ -21,7 +21,7 @@ const MATERIALS = {
     ],
     presets: [50, 75, 100],
     defaultDepth: 75,
-    hint: 'Recommended depth: 50-100mm for garden beds'
+    hint: 'Editable presets only — confirm the required depth for your project'
   },
   soil: {
     name: 'Soil',
@@ -36,7 +36,7 @@ const MATERIALS = {
     ],
     presets: [100, 150, 200],
     defaultDepth: 100,
-    hint: 'Recommended depth: 100-200mm for new garden beds'
+    hint: 'Editable presets only — confirm the required depth for your project'
   },
   gravel: {
     name: 'Gravel',
@@ -51,7 +51,7 @@ const MATERIALS = {
     ],
     presets: [50, 75, 100],
     defaultDepth: 50,
-    hint: 'Recommended depth: 50-100mm for pathways and driveways'
+    hint: 'Editable presets only — confirm the required depth for your project'
   },
   sand: {
     name: 'Sand',
@@ -66,7 +66,7 @@ const MATERIALS = {
     ],
     presets: [30, 50, 75],
     defaultDepth: 30,
-    hint: 'Recommended depth: 30-50mm for paving bedding'
+    hint: 'Editable presets only — confirm the required depth for your project'
   },
   roadbase: {
     name: 'Road Base',
@@ -80,13 +80,13 @@ const MATERIALS = {
     ],
     presets: [100, 150, 200],
     defaultDepth: 150,
-    hint: 'Recommended depth: 100-200mm for driveways and paths'
+    hint: 'Editable presets only — confirm the required depth for your project'
   }
 };
 
-// Bag and bulka bag sizes
-const BAG_WEIGHT_KG = 20; // Standard 20kg bag
-const BULKA_BAG_SIZE = 1.0; // 1 m³
+// Display-only ordering equivalents. Supplier pack and bulk-bag sizes vary.
+const BAG_WEIGHT_KG = 20;
+const BULKA_BAG_SIZE = 1.0;
 
 // =============================================================================
 // State
@@ -481,8 +481,8 @@ function handleCopyResult() {
   const text = `${subtypeName} Calculator Result
 Volume: ${state.result.volume.toFixed(2)} m³
 Weight: ${state.result.weight.toFixed(2)} tonnes
-20kg Bags: ${state.result.bags}
-Bulka Bags: ${state.result.bulkaBags}
+20 kg equivalents: ${state.result.bags}
+1 m³ bulk-bag equivalents: ${state.result.bulkaBags}
 Calculated at LandscapeCalc.com.au`;
 
   navigator.clipboard.writeText(text).then(() => {

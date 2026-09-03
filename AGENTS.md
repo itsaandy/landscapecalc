@@ -39,6 +39,16 @@ Do not alter tracking IDs or credentials unless the owner explicitly requests it
 - Treat material densities, bag sizes, coverage/depth recommendations, prices, standards, and safety claims as sensitive facts. Verify authoritative current sources before changing them.
 - Never fabricate ratings, reviews, credentials, first-hand experience, or schema-only content.
 
+## Approval-readiness and trust invariants
+
+- Keep `/about/`, `/contact/`, `/methodology/`, and `/privacy/` indexable but AdSense-free. `/privacy/` remains the only page that must also omit Analytics and all consent-dependent remote assets.
+- Monetise only the homepage and five maintained material calculator routes listed in the validator.
+- Keep the soil, sand, and gravel cubic-metre-weight resources indexable and AdSense-free. They must explain the selected planning coefficient, link to `/methodology/`, and avoid unsourced transport or safety claims.
+- Keep the other 45 project/example routes for old links, but mark them `noindex, follow`, remove AdSense, and exclude them from `sitemap.xml`. Do not present them as a large search-targeted content library during approval.
+- Keep `/methodology/` aligned with the calculator formulas, density coefficients, rounding, 20 kg and 1 m³ equivalence outputs, supplier-source links, limitations, and review date.
+- Treat the depth buttons as editable calculator presets, not universal recommendations. Do not claim that LandscapeCalc uses “Australian standards” or supplier-specific densities unless a visible current source supports the exact statement.
+- Preserve these boundaries in `validate_site.py` whenever tracking, shared markup, page inventory, or monetisation changes.
+
 ## Before editing
 
 1. Run `git status --short --branch`; preserve unrelated changes.

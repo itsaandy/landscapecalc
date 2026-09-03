@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Mulch Calculator Australia – m² to m³ | LandscapeCalc</title>
-  <meta name="description" content="Calculate how much mulch you need from area and depth. Get cubic metres, tonnes and 20kg bags for wood chip, bark and other Australian garden mulches.">
+  <meta name="description" content="Estimate wood chip, bark and other mulch in cubic metres from area and depth, with transparent indicative weight conversions.">
   <meta name="keywords" content="mulch calculator, wood chip calculator, bark mulch calculator, garden mulch, cubic metres calculator, Australia">
   <link rel="canonical" href="https://landscapecalc.com.au/mulch-calculator/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Mulch Calculator Australia – m² to m³ | LandscapeCalc">
-  <meta property="og:description" content="Calculate mulch from area and depth in cubic metres, tonnes and 20kg bags.">
+  <meta property="og:description" content="Estimate mulch from area and depth in cubic metres, with indicative weight conversions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://landscapecalc.com.au/mulch-calculator/">
   <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
@@ -20,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mulch Calculator Australia – m² to m³ | LandscapeCalc">
-  <meta name="twitter:description" content="Calculate mulch from area and depth in cubic metres, tonnes and bags.">
+  <meta name="twitter:description" content="Estimate mulch from area and depth in cubic metres, with indicative weight conversions.">
   <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
 
   <!-- Favicon -->
@@ -76,61 +77,13 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much mulch do I need for my garden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To calculate mulch volume, measure your garden bed's length and width in metres, then multiply by your desired depth (converted to metres). For a 5m x 3m bed at 75mm depth: 5 × 3 × 0.075 = 1.13 cubic metres. Use our calculator above to get instant results including weight and bag quantities."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How deep should mulch be in Australia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Australian gardens, mulch should typically be applied at 50-100mm depth. For weed suppression and moisture retention, 75mm is ideal for most garden beds. Around plants, keep mulch 50-100mm away from stems to prevent rot. In high-traffic areas or slopes, consider 100mm for better coverage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many cubic metres in a trailer load of mulch?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A standard 6x4 trailer holds approximately 0.7-1 cubic metre of mulch when filled level. A tandem trailer (8x5) holds about 1.5-2 cubic metres. Remember that mulch is sold by volume (cubic metres) but may settle during transport, so slight variations are normal."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the difference between mulch types?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wood chip mulch (0.4 tonnes per cubic metre) is chunky and long-lasting, ideal for paths. Bark mulch (0.35 tonnes per cubic metre) is finer and great for garden beds. Pine bark (0.3 tonnes per cubic metre) is lightweight and acidic, perfect for natives. Sugar cane mulch (0.2 tonnes per cubic metre) breaks down quickly, adding nutrients to soil. Choose based on your garden's needs and aesthetic preferences."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I convert cubic metres of mulch to tonnes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Multiply the volume in cubic metres by the mulch's density. Wood chip mulch has a density of approximately 0.4 tonnes per cubic metre, so 1m³ of wood chip weighs about 0.4 tonnes (400kg). Our calculator automatically converts between volume and weight for all mulch types."
-        }
-      }
-    ]
-  }
-  </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Mulch Calculator - LandscapeCalc",
-    "description": "Calculate how much mulch you need for your garden in cubic metres, tonnes, and bags.",
+    "description": "Estimate garden mulch in cubic metres from area and depth, with indicative weight conversions.",
     "url": "https://landscapecalc.com.au/mulch-calculator/",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
@@ -196,7 +149,7 @@
     <section class="page-header">
       <div class="container">
         <h1>Mulch Calculator for Australian Gardens</h1>
-        <p>Calculate exactly how much mulch you need for your garden beds, pathways, and landscaping projects. Get results in cubic metres, tonnes, and bags.</p>
+        <p>Estimate mulch volume for garden beds, pathways and landscaping projects. See cubic metres first, plus indicative weight and ordering equivalents.</p>
       </div>
     </section>
 
@@ -296,7 +249,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="75">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 50-100mm for garden beds</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
 
           <!-- Buttons -->
@@ -319,11 +272,11 @@
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bags">0</div>
-                <div class="result-card__item-label">20kg Bags</div>
+                <div class="result-card__item-label">20 kg equivalents</div>
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bulka">0</div>
-                <div class="result-card__item-label">Bulka Bags</div>
+                <div class="result-card__item-label">1 m³ bulk-bag equivalents</div>
               </div>
             </div>
             <div class="result-card__actions">
@@ -357,123 +310,32 @@
             </button>
             <div class="collapsible__content">
               <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
-              <p><strong>Weight:</strong> Volume × material density. Wood chip mulch has a density of 0.4 tonnes per cubic metre, while bark mulch is lighter at 0.35 tonnes per cubic metre.</p>
-              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough mulch.</p>
-              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+              <p><strong>Weight:</strong> Volume × the selected indicative density. Confirm the exact product conversion with the supplier; see <a href="/methodology/">Methodology &amp; Sources</a>.</p>
+              <p><strong>20 kg equivalent:</strong> Estimated kilograms ÷ 20, rounded up. This is a mass comparison, not a retail pack count.</p>
+              <p><strong>1 m³ bulk-bag equivalent:</strong> Volume ÷ 1.0, rounded up. Confirm the supplier's actual bulk-bag size.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEO Content Section -->
+    <!-- Maintained calculator guidance -->
     <section class="content-section">
       <div class="container">
-        <h2>How to Calculate Mulch for Your Garden</h2>
-        <p>Calculating the right amount of mulch for your Australian garden is essential for achieving optimal plant health and minimising waste. Whether you're preparing garden beds, creating pathways, or landscaping a large area, our mulch calculator takes the guesswork out of your project planning.</p>
+        <h2>Calculate Mulch Volume Before You Order</h2>
+        <p>Enter the measured shape, dimensions and required depth. LandscapeCalc converts millimetres to metres and calculates cubic metres without adding a hidden waste or settlement allowance.</p>
 
-        <h3>Understanding Mulch Measurements</h3>
-        <p>In Australia, mulch is typically sold by the cubic metre (m³). To calculate how much you need, you'll multiply your area's length by width by depth. Our calculator converts your measurements instantly and provides results in cubic metres, tonnes, and bag quantities, making it easy to order the exact amount you need.</p>
+        <h3>Volume Is the Primary Result</h3>
+        <p>Australian landscape yards commonly quote loose mulch by volume. Split irregular beds into simple rectangles, circles or triangles, calculate each section, and add the cubic-metre results. Subtracting trunks or small plants is usually less reliable than measuring the actual area you intend to cover.</p>
 
-        <h3>Choosing the Right Mulch Depth</h3>
-        <p>For most Australian garden beds, a depth of 75mm strikes the right balance between weed suppression and moisture retention. If you're mulching around annual flower beds or areas with established plants, 50mm is usually sufficient and allows delicate stems to breathe. For native gardens, steep slopes, or areas where maximum weed control is the priority, go deeper at 100mm. This thicker layer creates a more effective barrier against weeds while providing better insulation for plant roots during temperature extremes.</p>
+        <h3>Material Choice Changes the Weight Estimate</h3>
+        <p>Selecting wood chip, bark, pine bark or another mulch changes only the indicative weight coefficient. It does not change the measured volume. Organic material varies with moisture, particle size and composition, so use the supplier's product conversion when one is available.</p>
 
-        <h3>Types of Mulch Available in Australia</h3>
-        <p>Wood chip mulch at 0.4 tonnes per cubic metre is the most popular all-purpose option, made from chipped tree branches and ideal for pathways where its chunky texture provides excellent longevity. Bark mulch is slightly lighter at 0.35 tonnes per cubic metre and breaks down slower than wood chips, making it a favourite for formal gardens where appearance matters. Pine bark at 0.3 tonnes per cubic metre is the lightest option and naturally acidic, which makes it perfect for acid-loving plants like azaleas, camellias, and many Australian natives.</p>
-        <p>Cypress mulch at 0.45 tonnes per cubic metre offers natural resistance to termites and fungal decay, making it the smart choice for areas near buildings or in regions with high termite activity. Eucalyptus mulch weighs in at 0.4 tonnes per cubic metre and carries the distinctive scent of native Australian bush while breaking down to improve your soil quality over time. For vegetable gardens, sugar cane mulch at just 0.2 tonnes per cubic metre is extremely lightweight and breaks down quickly, adding valuable nutrients back into your soil with each growing season.</p>
-        <p>Hardwood mulch at 0.5 tonnes per cubic metre is denser and longer-lasting, perfect for low-maintenance areas where you want mulch that will stay in place for years.</p>
+        <h3>Depth Is Your Input, Not Our Recommendation</h3>
+        <p>The depth buttons are editable starting points. Enter the depth specified for the selected product and project; LandscapeCalc does not decide plant, fire, termite or installation requirements.</p>
 
-        <h3>Tips for Applying Mulch</h3>
-        <p>To get the best results from your mulch application, always keep mulch 50-100mm away from plant stems and tree trunks to prevent collar rot and fungal issues. Water the area thoroughly before spreading your mulch, then water again after application to help it settle into place. Since organic mulches break down over time, plan to top up your mulch layer annually to maintain effective coverage. For extra weed suppression in problem areas, consider laying newspaper or cardboard underneath your mulch before spreading—this creates an additional barrier that smothers existing weeds while eventually breaking down to feed your soil.</p>
-
-        <h3>Ordering and Delivery</h3>
-        <p>Once you've calculated your mulch requirements, you can order from your local landscape supplier. Most suppliers in Australia deliver in bulk by the cubic metre or in bags. For larger projects, bulk delivery is significantly more cost-effective, while bags are convenient for smaller jobs or areas with limited access where a truck can't reach.</p>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <h2 class="faq-section__title">Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How much mulch do I need for my garden?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>To calculate mulch volume, measure your garden bed's length and width in metres, then multiply by your desired depth (converted to metres). For a 5m x 3m bed at 75mm depth: 5 × 3 × 0.075 = 1.13 cubic metres. Use our calculator above to get instant results including weight and bag quantities.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How deep should mulch be in Australia?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>In Australian gardens, mulch should typically be applied at 50-100mm depth. For weed suppression and moisture retention, 75mm is ideal for most garden beds. Around plants, keep mulch 50-100mm away from stems to prevent rot. In high-traffic areas or slopes, consider 100mm for better coverage.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How many cubic metres in a trailer load of mulch?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>A standard 6x4 trailer holds approximately 0.7-1 cubic metre of mulch when filled level. A tandem trailer (8x5) holds about 1.5-2 cubic metres. Remember that mulch is sold by volume (cubic metres) but may settle during transport, so slight variations are normal.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              What's the difference between mulch types?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Wood chip mulch (0.4 tonnes per cubic metre) is chunky and long-lasting, ideal for paths. Bark mulch (0.35 tonnes per cubic metre) is finer and great for garden beds. Pine bark (0.3 tonnes per cubic metre) is lightweight and acidic, perfect for natives. Sugar cane mulch (0.2 tonnes per cubic metre) breaks down quickly, adding nutrients to soil. Choose based on your garden's needs and aesthetic preferences.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How do I convert cubic metres of mulch to tonnes?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Multiply the volume in cubic metres by the mulch's density. Wood chip mulch has a density of approximately 0.4 tonnes per cubic metre, so 1m³ of wood chip weighs about 0.4 tonnes (400kg). Our calculator automatically converts between volume and weight for all mulch types.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Popular Calculations -->
-    <section class="popular-calculations">
-      <div class="container">
-        <h2 class="popular-calculations__title">Popular Mulch Calculations</h2>
-        <p class="popular-calculations__desc">Quick answers for common mulch projects:</p>
-        <div class="popular-grid">
-          <a href="/mulch-calculator/10-square-metres/">Mulch for 10 Square Metres</a>
-          <a href="/mulch-calculator/20-square-metres/">Mulch for 20 Square Metres</a>
-          <a href="/mulch-calculator/50-square-metres/">Mulch for 50 Square Metres</a>
-          <a href="/mulch-calculator/100-square-metres/">Mulch for 100 Square Metres</a>
-          <a href="/mulch-calculator/front-garden/">Mulch for a Front Garden</a>
-          <a href="/mulch-calculator/garden-bed/">How Much Mulch for a Garden Bed</a>
-          <a href="/mulch-calculator/garden-path/">Mulch for a Garden Path</a>
-          <a href="/mulch-calculator/around-trees/">Mulch Around Trees</a>
-          <a href="/mulch-calculator/playground/">Mulch for a Playground</a>
-          <a href="/mulch-calculator/weed-suppression/">Mulch Depth for Weed Suppression</a>
-          <a href="/mulch-calculator/raised-garden-bed/">Mulch for Raised Garden Beds</a>
-          <a href="/mulch-calculator/cubic-metre-coverage/">How Far Does 1 Cubic Metre of Mulch Go?</a>
-        </div>
+        <h3>Check the Result With the Supplier</h3>
+        <p>Before purchase, confirm whether the supplier sells loose cubic metres, litre bags or a particular bulk-bag size. See every formula, coefficient and rounding rule on the <a href="/methodology/">Methodology &amp; Sources page</a>.</p>
       </div>
     </section>
 
@@ -521,6 +383,8 @@
       </a>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="/about/">About</a>
+        <a href="/methodology/">Methodology &amp; Sources</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a>
         <a href="/mulch-calculator/">Mulch</a>

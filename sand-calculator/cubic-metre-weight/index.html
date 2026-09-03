@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Sand Weight per m³ – kg &amp; Tonnes Calculator | LandscapeCalc</title>
-  <meta name="description" content="One cubic metre of washed sand weighs about 1,500kg (1.5 tonnes), or 75 × 20kg bags. Compare sand types and calculate your total weight.">
+  <meta name="description" content="Using LandscapeCalc's washed-sand planning coefficient, one cubic metre is estimated at 1,500kg. Compare sand types and verify the supplier conversion.">
   <link rel="canonical" href="https://landscapecalc.com.au/sand-calculator/cubic-metre-weight/">
 
   <meta property="og:title" content="Sand Weight per m³ – kg &amp; Tonnes Calculator | LandscapeCalc">
@@ -34,11 +35,6 @@
 
     gtag('config', 'G-MSK7HS9TW3');
   </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2538773959178920"
-    crossorigin="anonymous"></script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -130,7 +126,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 20-30mm for paver bedding</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
           <div class="btn-group">
             <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
@@ -140,8 +136,8 @@
             <div class="result-card__primary"><span class="result-card__value" id="result-volume">0.00</span><span class="result-card__unit">m³</span><p class="result-card__label">Total Volume</p></div>
             <div class="result-card__secondary">
               <div class="result-card__item"><div class="result-card__item-value" id="result-tonnes">0.00</div><div class="result-card__item-label">Estimated Weight (tonnes)</div></div>
-              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20kg Bags</div></div>
-              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">Bulka Bags</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20 kg equivalents</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">1 m³ bulk-bag equivalents</div></div>
             </div>
             <div class="result-card__actions">
               <button type="button" id="copy-btn" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy Result</button>
@@ -153,24 +149,22 @@
     </div>
 
     <section class="content-section"><div class="container">
-      <h2>Understanding Sand Weight Per Cubic Metre</h2>
-      <p>Sand is one of the denser landscape materials commonly used in residential projects, making weight a crucial consideration for transport and handling. Standard washed sand weighs approximately 1.5 tonnes per cubic metre. The calculator above confirms this by showing that one cubic metre of washed sand comes to 1.5 tonnes, or 1,500 kilograms. This makes sand comparable in weight to gravel and significantly heavier than mulch or most garden soils.</p>
+      <h2>What the Sand Weight Result Means</h2>
+      <p>The page starts with a 1m × 1m area at 1,000mm depth, which is exactly one cubic metre. With washed sand selected, LandscapeCalc multiplies that volume by its 1.50 tonnes-per-cubic-metre planning coefficient to display 1.50 tonnes, or 1,500 kilograms.</p>
 
-      <p>Understanding this weight is essential when planning how to get sand to your project site. A small trailer rated at 750kg can safely carry only half a cubic metre of sand. Even a tandem trailer rated at 2 tonnes handles roughly 1.3 cubic metres before reaching its limit. For most sand projects, bulk delivery makes practical sense given these weight constraints.</p>
+      <h3>Why the Supplier Figure Can Differ</h3>
+      <p>Sand density changes with grading, mineral composition, moisture and compaction. Australian Native Landscapes, for example, publishes indicative loose values from 1.3 to 1.5 tonnes per cubic metre for several sands. LandscapeCalc uses 1.50 for most listed sands and 1.60 for paving sand; the complete coefficient list and source policy are on the <a href="/methodology/">Methodology &amp; Sources page</a>.</p>
 
-      <h3>Moisture Affects Weight</h3>
-      <p>Sand weight varies with moisture content. Dry sand weighs less than wet sand, and sand that has been sitting in the rain can be significantly heavier than the nominal 1.5 tonnes per cubic metre. Suppliers typically quote weights based on normally moist sand, not oven-dried or saturated material. This variation is why ordering by volume rather than weight remains standard practice, though delivery tickets often show both measurements.</p>
+      <h3>Mass Equivalents Are Not Bag Counts</h3>
+      <p>The 20 kg result divides estimated kilograms by 20. It is a mass equivalent, not a statement that every sand product is sold in 20 kg bags or that bagged volume will equal bulk volume. Confirm the pack size, coverage and supplier conversion before ordering.</p>
 
-      <h3>Weight Per Bag Reference</h3>
-      <p>For those buying sand in bags, standard 20kg bags are common at hardware stores. One cubic metre of sand equals approximately 75 bags at 20kg each. This adds up quickly for larger projects, with a simple sandpit needing over 50 bags and a medium paving job potentially requiring well over 100 bags. Beyond a few hundred kilograms, bulk delivery almost always proves more economical and saves enormous handling effort.</p>
-
-      <p>Planning a specific sand project? Use our main <a href="/sand-calculator/">sand calculator</a> to enter your dimensions and get exact volume and weight figures.</p>
+      <p>For a different area or depth, use the main <a href="/sand-calculator/">sand calculator</a> and enter the dimensions from your project requirements.</p>
     </div></section>
 
     <section class="related-section"><div class="container">
       <h2 class="related-section__title">Related Calculations</h2>
       <div class="related-grid">
-        <a href="/sand-calculator/sandpit/" class="material-card"><div class="material-card__icon material-card__icon--sand"></div><h3 class="material-card__title">Sandpit</h3><p class="material-card__desc">Play sand</p></a>
+        <a href="/sand-calculator/" class="material-card"><div class="material-card__icon material-card__icon--sand"></div><h3 class="material-card__title">Sand Calculator</h3><p class="material-card__desc">Estimate sand volume</p></a>
         <a href="/gravel-calculator/cubic-metre-weight/" class="material-card"><div class="material-card__icon material-card__icon--gravel"></div><h3 class="material-card__title">Gravel Weight</h3><p class="material-card__desc">Gravel per m³</p></a>
         <a href="/soil-calculator/cubic-metre-weight/" class="material-card"><div class="material-card__icon material-card__icon--soil"></div><h3 class="material-card__title">Soil Weight</h3><p class="material-card__desc">Soil per m³</p></a>
       </div>
@@ -181,7 +175,7 @@
 
   <footer class="footer"><div class="container footer__inner">
     <a href="/" class="footer__logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>LandscapeCalc</a>
-    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
+    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/methodology/">Methodology &amp; Sources</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
     <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
   </div></footer>
   <script src="/js/calculator.js"></script>

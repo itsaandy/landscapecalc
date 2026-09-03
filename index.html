@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Landscape Materials Calculator - Mulch, Soil, Gravel | LandscapeCalc</title>
-  <meta name="description" content="Free online calculator for Australian landscapers and homeowners. Calculate mulch, soil, gravel, sand, and roadbase quantities in cubic metres, tonnes, and bags.">
+  <meta name="description" content="Estimate mulch, soil, gravel, sand and road base in cubic metres from your dimensions, with transparent indicative weight conversions.">
   <meta name="keywords" content="landscape calculator, mulch calculator, soil calculator, gravel calculator, sand calculator, roadbase calculator, cubic metre calculator, Australia">
   <link rel="canonical" href="https://landscapecalc.com.au/">
 
@@ -120,7 +121,7 @@
     <section class="hero">
       <div class="container">
         <h1>Landscape Materials Calculator</h1>
-        <p class="hero__subtitle">Calculate exactly how much mulch, soil, gravel, sand, or roadbase you need for your next project.</p>
+        <p class="hero__subtitle">Estimate the mulch, soil, gravel, sand, or road base volume you need, with indicative weight and ordering equivalents.</p>
         <div class="hero__badges">
           <span class="hero__badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -141,7 +142,7 @@
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            Australian standards
+            Australian metric units
           </span>
         </div>
       </div>
@@ -243,7 +244,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="75">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 50-100mm for garden beds</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
 
           <!-- Buttons -->
@@ -266,11 +267,11 @@
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bags">0</div>
-                <div class="result-card__item-label">20kg Bags</div>
+                <div class="result-card__item-label">20 kg equivalents</div>
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bulka">0</div>
-                <div class="result-card__item-label">Bulka Bags</div>
+                <div class="result-card__item-label">1 m³ bulk-bag equivalents</div>
               </div>
             </div>
             <div class="result-card__actions">
@@ -304,9 +305,9 @@
             </button>
             <div class="collapsible__content">
               <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
-              <p><strong>Weight:</strong> Volume × material density. Each material type has a specific density (tonnes per cubic metre) based on Australian industry standards.</p>
-              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough material.</p>
-              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+              <p><strong>Weight:</strong> Volume × the selected indicative density. Confirm the exact product conversion with the supplier; see <a href="/methodology/">Methodology &amp; Sources</a>.</p>
+              <p><strong>20 kg equivalent:</strong> Estimated kilograms ÷ 20, rounded up. This is a mass comparison, not a retail pack count.</p>
+              <p><strong>1 m³ bulk-bag equivalent:</strong> Volume ÷ 1.0, rounded up. Confirm the supplier's actual bulk-bag size.</p>
             </div>
           </div>
         </div>
@@ -347,22 +348,16 @@
       </div>
     </section>
 
-    <!-- Popular Calculations Section -->
+    <!-- Maintained Resources Section -->
     <section class="popular-calculations">
       <div class="container">
-        <h2 class="popular-calculations__title">Popular Calculations</h2>
-        <p class="popular-calculations__desc">Quick answers for common landscaping projects:</p>
+        <h2 class="popular-calculations__title">Calculation Resources</h2>
+        <p class="popular-calculations__desc">Check the assumptions behind the results or compare indicative weight for one cubic metre:</p>
         <div class="popular-grid">
-          <a href="/mulch-calculator/garden-bed/">How Much Mulch for a Garden Bed</a>
-          <a href="/soil-calculator/raised-garden-bed/">Soil for a Raised Garden Bed</a>
-          <a href="/gravel-calculator/driveway/">How Much Gravel for a Driveway</a>
-          <a href="/sand-calculator/paving-base/">How Much Sand for Paving</a>
-          <a href="/roadbase-calculator/driveway/">Roadbase for a Driveway</a>
-          <a href="/mulch-calculator/10-square-metres/">Mulch for 10 Square Metres</a>
-          <a href="/soil-calculator/veggie-patch/">How Much Soil for a Veggie Patch</a>
-          <a href="/gravel-calculator/garden-path/">Gravel for a Garden Path</a>
-          <a href="/sand-calculator/sandpit/">Sand for a Sandpit</a>
-          <a href="/roadbase-calculator/shed-base/">Roadbase for a Shed Base</a>
+          <a href="/methodology/">Methodology &amp; Sources</a>
+          <a href="/soil-calculator/cubic-metre-weight/">Soil Weight per Cubic Metre</a>
+          <a href="/gravel-calculator/cubic-metre-weight/">Gravel Weight per Cubic Metre</a>
+          <a href="/sand-calculator/cubic-metre-weight/">Sand Weight per Cubic Metre</a>
         </div>
       </div>
     </section>
@@ -378,8 +373,8 @@
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <h3 class="feature__title">Australian Densities</h3>
-            <p class="feature__desc">Material densities based on Australian industry standards and supplier specifications.</p>
+            <h3 class="feature__title">Transparent Assumptions</h3>
+            <p class="feature__desc">Every formula and indicative density is published on the <a href="/methodology/">methodology page</a>.</p>
           </div>
           <div class="feature">
             <div class="feature__icon">
@@ -389,7 +384,7 @@
               </svg>
             </div>
             <h3 class="feature__title">Mobile Friendly</h3>
-            <p class="feature__desc">Works perfectly on your phone at the landscape yard or job site.</p>
+            <p class="feature__desc">Designed for phones as well as larger screens, with shareable calculation links.</p>
           </div>
           <div class="feature">
             <div class="feature__icon">
@@ -423,6 +418,8 @@
       </a>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="/about/">About</a>
+        <a href="/methodology/">Methodology &amp; Sources</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a>
         <a href="/mulch-calculator/">Mulch</a>

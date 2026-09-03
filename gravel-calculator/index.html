@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Gravel Calculator – Blue Metal &amp; Crushed Rock | LandscapeCalc</title>
-  <meta name="description" content="Calculate how much gravel, blue metal or crushed rock you need in cubic metres, tonnes and 20kg bags. Free calculator for Australian driveways and gardens.">
+  <meta name="description" content="Estimate gravel, blue metal and crushed rock in cubic metres from area and depth, with transparent indicative weight conversions.">
   <meta name="keywords" content="gravel calculator, blue metal calculator, crushed rock calculator, driveway gravel, decorative pebbles, cubic metres calculator, Australia">
   <link rel="canonical" href="https://landscapecalc.com.au/gravel-calculator/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Gravel Calculator – Blue Metal &amp; Crushed Rock | LandscapeCalc">
-  <meta property="og:description" content="Calculate gravel, blue metal and crushed rock in cubic metres, tonnes and 20kg bags.">
+  <meta property="og:description" content="Estimate gravel, blue metal and crushed rock in cubic metres, with indicative weight conversions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://landscapecalc.com.au/gravel-calculator/">
   <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
@@ -20,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gravel Calculator – Blue Metal &amp; Crushed Rock | LandscapeCalc">
-  <meta name="twitter:description" content="Calculate gravel, blue metal and crushed rock in cubic metres, tonnes and bags.">
+  <meta name="twitter:description" content="Estimate gravel, blue metal and crushed rock in cubic metres, with indicative weight conversions.">
   <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
 
   <!-- Favicon -->
@@ -76,61 +77,13 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much gravel do I need for my driveway?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Calculate driveway gravel by measuring length × width × depth (in metres). For a 10m × 3m driveway at 75mm depth: 10 × 3 × 0.075 = 2.25 cubic metres. Use our calculator to get instant results including weight conversions for ordering."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How deep should gravel be for a driveway?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For residential driveways in Australia, gravel should be 75-100mm deep over a compacted roadbase layer. For light traffic paths, 50mm is sufficient. Always compact gravel in layers of no more than 75mm for best results."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the difference between blue metal and crushed granite?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Blue metal (1.5 tonnes per cubic metre) is crushed basalt/bluestone, dark grey in colour, commonly used for driveways and drainage. Crushed granite (1.4 tonnes per cubic metre) is lighter in colour with gold/brown tones, popular for decorative paths and garden features."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many tonnes of gravel in a cubic metre?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Gravel typically weighs 1.4-1.6 tonnes per cubic metre depending on the type. Blue metal is approximately 1.5 tonnes per cubic metre, river pebbles are 1.6 tonnes per cubic metre, and crushed granite is 1.4 tonnes per cubic metre. Our calculator provides automatic weight conversions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use decorative gravel for driveways?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "While decorative pebbles look attractive, they're not ideal for driveways as they can scatter and don't compact well. For driveways, use angular crushed rock like blue metal or granite that locks together. Save decorative pebbles for garden beds and paths."
-        }
-      }
-    ]
-  }
-  </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Gravel Calculator - LandscapeCalc",
-    "description": "Calculate how much gravel you need for driveways and gardens in cubic metres, tonnes, and bags.",
+    "description": "Estimate gravel in cubic metres from area and depth, with indicative weight conversions.",
     "url": "https://landscapecalc.com.au/gravel-calculator/",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
@@ -196,7 +149,7 @@
     <section class="page-header">
       <div class="container">
         <h1>Gravel Calculator for Blue Metal &amp; Crushed Rock</h1>
-        <p>Calculate exactly how much gravel, blue metal, or decorative pebbles you need for your driveway, pathway, or garden project. Get results in cubic metres, tonnes, and bags.</p>
+        <p>Estimate gravel, blue metal or decorative pebble volume for your project. See cubic metres first, plus indicative weight and ordering equivalents.</p>
       </div>
     </section>
 
@@ -296,7 +249,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="50">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 50-100mm for pathways and driveways</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
 
           <!-- Buttons -->
@@ -319,11 +272,11 @@
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bags">0</div>
-                <div class="result-card__item-label">20kg Bags</div>
+                <div class="result-card__item-label">20 kg equivalents</div>
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bulka">0</div>
-                <div class="result-card__item-label">Bulka Bags</div>
+                <div class="result-card__item-label">1 m³ bulk-bag equivalents</div>
               </div>
             </div>
             <div class="result-card__actions">
@@ -357,123 +310,37 @@
             </button>
             <div class="collapsible__content">
               <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
-              <p><strong>Weight:</strong> Volume × gravel density. Blue metal has a density of 1.5 tonnes per cubic metre, while river pebbles are heavier at 1.6 tonnes per cubic metre.</p>
-              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough gravel.</p>
-              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+              <p><strong>Weight:</strong> Volume × the selected indicative density. Confirm the exact product conversion with the supplier; see <a href="/methodology/">Methodology &amp; Sources</a>.</p>
+              <p><strong>20 kg equivalent:</strong> Estimated kilograms ÷ 20, rounded up. This is a mass comparison, not a retail pack count.</p>
+              <p><strong>1 m³ bulk-bag equivalent:</strong> Volume ÷ 1.0, rounded up. Confirm the supplier's actual bulk-bag size.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEO Content Section -->
+    <!-- Maintained calculator guidance -->
     <section class="content-section">
       <div class="container">
-        <h2>How to Calculate Gravel for Your Project</h2>
-        <p>Calculating the right amount of gravel for your Australian property is essential whether you're creating a driveway, pathway, drainage solution, or decorative garden feature. Our gravel calculator provides instant, accurate measurements to help you order the exact amount needed.</p>
+        <h2>Calculate Gravel in Cubic Metres</h2>
+        <p>Measure the area, enter the required depth and select the closest gravel product. LandscapeCalc calculates geometric volume first; it does not add a hidden compaction or waste allowance.</p>
 
-        <h3>Understanding Gravel Measurements</h3>
-        <p>In Australia, gravel is typically sold by the tonne or cubic metre. Since gravel is dense and heavy, weight-based pricing is common. Our calculator provides both volume and weight measurements, allowing you to compare quotes from different suppliers accurately.</p>
+        <h3>Break Irregular Areas Into Simple Shapes</h3>
+        <p>Calculate rectangles, circles and triangles separately, then add their cubic-metre results. For an area with a cut-out, calculate the full shape and subtract the cut-out volume.</p>
 
-        <h3>Choosing the Right Gravel Depth</h3>
-        <p>For decorative garden beds where gravel serves as a mulch alternative or for paths with only light foot traffic, 50mm provides adequate coverage while keeping costs reasonable. General pathways and residential driveways perform best with 75mm of gravel laid over a properly compacted roadbase foundation—this depth gives vehicles enough material to grip while remaining stable underfoot. In heavy traffic areas or where drainage is the primary concern, increase the depth to 100mm to ensure longevity and proper water flow.</p>
+        <h3>Weight Is an Indicative Conversion</h3>
+        <p>Blue metal, river pebbles and crushed products differ in particle size, fines and moisture. Selecting a subtype changes the planning coefficient used for tonnes, not the volume calculation. Ask the supplier for the conversion applicable to the exact product.</p>
 
-        <h3>Types of Gravel Available in Australia</h3>
-        <p>Blue metal (also called bluestone) at 1.5 tonnes per cubic metre remains Australia's most popular choice for driveways and drainage applications. This crushed basalt ranges from dark grey to blue-black in colour, and its angular shape locks together during compaction to create an exceptionally stable surface. Crushed granite at 1.4 tonnes per cubic metre offers similar performance with a broader colour palette ranging from gold to pink, making it popular for decorative paths where appearance matters as much as function.</p>
-        <p>River pebbles at 1.6 tonnes per cubic metre are the heaviest option and feature smooth, rounded stones in natural earth tones. Their polished appearance makes them perfect for garden beds, water features, and areas where a softer aesthetic is desired—though their rounded shape means they don't compact as firmly as angular alternatives. Crushed sandstone at 1.4 tonnes per cubic metre brings warm yellow to brown tones that complement heritage properties and native gardens beautifully, while crushed limestone at 1.5 tonnes per cubic metre offers bright white to cream colours for a striking contrast in the landscape.</p>
-        <p>For environmentally conscious projects, recycled aggregate at 1.4 tonnes per cubic metre is made from crushed concrete and brick, providing a sustainable option for non-decorative applications like drainage or base layers. Decorative pebbles at 1.5 tonnes per cubic metre come in various colours and sizes for feature areas where visual impact is the priority.</p>
-
-        <h3>Tips for Using Gravel</h3>
-        <p>To ensure your gravel stays where you want it and performs well over time, always install landscape fabric underneath to prevent weeds from pushing through. Edge your gravel areas with steel, timber, or concrete borders to stop stones from migrating into surrounding lawn or garden beds. For driveways and high-traffic paths, compact your gravel in layers rather than all at once—this creates a much more stable surface that won't rut under vehicle tyres. One of gravel's key benefits is its permeability, allowing rainwater to drain through rather than running off, which makes it an excellent choice for areas where you want to reduce stormwater issues. For any driveway application, always install gravel over a properly compacted roadbase layer—the gravel alone won't provide the structural support vehicles require.</p>
-
-        <h3>Gravel vs Roadbase</h3>
-        <p>While both are crushed stone, gravel and roadbase serve different purposes. Gravel is typically single-sized decorative stone for surface applications, while roadbase contains a graded mix of particle sizes specifically engineered to compact into a solid structural layer. For proper driveway construction, you need both—roadbase underneath to provide strength and stability, with gravel on top for the finished surface.</p>
+        <h3>Product and Depth Remain Project Decisions</h3>
+        <p>The calculator does not determine whether a gravel is suitable for a driveway, path, drainage layer or structural application. Use the depth and material specified by the relevant supplier, designer or installer. See the <a href="/methodology/">Methodology &amp; Sources page</a> for formulas and limitations.</p>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <h2 class="faq-section__title">Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How much gravel do I need for my driveway?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Calculate driveway gravel by measuring length × width × depth (in metres). For a 10m × 3m driveway at 75mm depth: 10 × 3 × 0.075 = 2.25 cubic metres. Use our calculator to get instant results including weight conversions for ordering.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How deep should gravel be for a driveway?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>For residential driveways in Australia, gravel should be 75-100mm deep over a compacted roadbase layer. For light traffic paths, 50mm is sufficient. Always compact gravel in layers of no more than 75mm for best results.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              What's the difference between blue metal and crushed granite?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Blue metal (1.5 tonnes per cubic metre) is crushed basalt/bluestone, dark grey in colour, commonly used for driveways and drainage. Crushed granite (1.4 tonnes per cubic metre) is lighter in colour with gold/brown tones, popular for decorative paths and garden features.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How many tonnes of gravel in a cubic metre?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Gravel typically weighs 1.4-1.6 tonnes per cubic metre depending on the type. Blue metal is approximately 1.5 tonnes per cubic metre, river pebbles are 1.6 tonnes per cubic metre, and crushed granite is 1.4 tonnes per cubic metre. Our calculator provides automatic weight conversions.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              Can I use decorative gravel for driveways?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>While decorative pebbles look attractive, they're not ideal for driveways as they can scatter and don't compact well. For driveways, use angular crushed rock like blue metal or granite that locks together. Save decorative pebbles for garden beds and paths.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Popular Calculations -->
-    <section class="popular-calculations">
-      <div class="container">
-        <h2 class="popular-calculations__title">Popular Gravel Calculations</h2>
-        <p class="popular-calculations__desc">Quick answers for common gravel projects:</p>
-        <div class="popular-grid">
-          <a href="/gravel-calculator/10-square-metres/">Gravel for 10 Square Metres</a>
-          <a href="/gravel-calculator/20-square-metres/">Gravel for 20 Square Metres</a>
-          <a href="/gravel-calculator/driveway/">How Much Gravel for a Driveway</a>
-          <a href="/gravel-calculator/garden-path/">Gravel for a Garden Path</a>
-          <a href="/gravel-calculator/double-driveway/">Gravel for a Double Driveway</a>
-          <a href="/gravel-calculator/parking-area/">Gravel for a Parking Area</a>
-          <a href="/gravel-calculator/french-drain/">How Much Gravel for a French Drain</a>
-          <a href="/gravel-calculator/around-pavers/">Gravel Around Pavers</a>
-          <a href="/gravel-calculator/under-deck/">Gravel Under a Deck</a>
-          <a href="/gravel-calculator/cubic-metre-weight/">How Much Does a Cubic Metre of Gravel Weigh?</a>
-        </div>
-      </div>
-    </section>
+    <section class="popular-calculations"><div class="container">
+      <h2 class="popular-calculations__title">Gravel Weight Reference</h2>
+      <p class="popular-calculations__desc">See how the indicative conversion works for a one-cubic-metre starting volume.</p>
+      <div class="popular-grid"><a href="/gravel-calculator/cubic-metre-weight/">Gravel Weight per Cubic Metre</a><a href="/methodology/">Methodology &amp; Sources</a></div>
+    </div></section>
 
     <!-- Related Calculators -->
     <section class="related-section">
@@ -519,6 +386,8 @@
       </a>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="/about/">About</a>
+        <a href="/methodology/">Methodology &amp; Sources</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a>
         <a href="/mulch-calculator/">Mulch</a>

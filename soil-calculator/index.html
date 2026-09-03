@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
   <title>Soil Calculator – Topsoil in m³ &amp; Tonnes | LandscapeCalc</title>
-  <meta name="description" content="Calculate topsoil, garden mix and sandy loam from area and depth. Get cubic metres, tonnes and 20kg bags for Australian garden beds and new lawns.">
+  <meta name="description" content="Estimate topsoil, garden mix and sandy loam in cubic metres from area and depth, with transparent indicative weight conversions.">
   <meta name="keywords" content="soil calculator, topsoil calculator, garden mix calculator, veggie mix calculator, cubic metres calculator, Australia">
   <link rel="canonical" href="https://landscapecalc.com.au/soil-calculator/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Soil Calculator – Topsoil in m³ &amp; Tonnes | LandscapeCalc">
-  <meta property="og:description" content="Calculate topsoil and garden mix from area and depth in cubic metres, tonnes and bags.">
+  <meta property="og:description" content="Estimate topsoil and garden mix from area and depth in cubic metres, with indicative weight conversions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://landscapecalc.com.au/soil-calculator/">
   <meta property="og:image" content="https://landscapecalc.com.au/images/og-image.png">
@@ -20,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Soil Calculator – Topsoil in m³ &amp; Tonnes | LandscapeCalc">
-  <meta name="twitter:description" content="Calculate topsoil and garden mix from area and depth in cubic metres, tonnes and bags.">
+  <meta name="twitter:description" content="Estimate topsoil and garden mix from area and depth in cubic metres, with indicative weight conversions.">
   <meta name="twitter:image" content="https://landscapecalc.com.au/images/og-image.png">
 
   <!-- Favicon -->
@@ -76,61 +77,13 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much topsoil do I need?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Calculate topsoil by multiplying length × width × depth (in metres). For a 10m × 5m area at 100mm depth: 10 × 5 × 0.1 = 5 cubic metres. Our calculator provides instant results and converts to tonnes based on soil type density."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How deep should topsoil be for a new lawn?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For new lawns in Australia, apply 100-150mm of turf underlay soil. This provides adequate root depth for healthy grass establishment. Existing lawns being renovated may only need 50mm of additional soil to level and improve drainage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the difference between topsoil and garden mix?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Topsoil (1.1 tonnes per cubic metre) is screened natural soil ideal for filling and levelling. Garden mix (1.0 tonnes per cubic metre) is a blend of soil, compost, and organic matter designed for planting. Veggie mix (0.9 tonnes per cubic metre) is specifically formulated for vegetable gardens with added nutrients."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many cubic metres of soil in a trailer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A standard 6x4 trailer holds approximately 0.5-0.7 cubic metres of soil when filled level (soil is heavier than mulch). A tandem trailer holds about 1-1.5 cubic metres. Always check your trailer's weight capacity as soil is dense - 1m³ weighs over 1 tonne."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I convert cubic metres of soil to tonnes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Multiply volume by soil density. Topsoil has a density of approximately 1.1 tonnes per cubic metre, so 1m³ weighs about 1.1 tonnes (1100kg). Our calculator automatically converts between volume and weight for all soil types including garden mix and veggie mix."
-        }
-      }
-    ]
-  }
-  </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Soil Calculator - LandscapeCalc",
-    "description": "Calculate how much topsoil or garden mix you need in cubic metres, tonnes, and bags.",
+    "description": "Estimate topsoil or garden mix in cubic metres from area and depth, with indicative weight conversions.",
     "url": "https://landscapecalc.com.au/soil-calculator/",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
@@ -196,7 +149,7 @@
     <section class="page-header">
       <div class="container">
         <h1>Soil &amp; Topsoil Calculator</h1>
-        <p>Calculate exactly how much topsoil, garden mix, or veggie mix you need for your landscaping project. Get results in cubic metres, tonnes, and bags.</p>
+        <p>Estimate topsoil, garden mix or veggie mix volume for your project. See cubic metres first, plus indicative weight and ordering equivalents.</p>
       </div>
     </section>
 
@@ -296,7 +249,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1" value="100">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 100-200mm for new garden beds</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
 
           <!-- Buttons -->
@@ -319,11 +272,11 @@
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bags">0</div>
-                <div class="result-card__item-label">20kg Bags</div>
+                <div class="result-card__item-label">20 kg equivalents</div>
               </div>
               <div class="result-card__item">
                 <div class="result-card__item-value" id="result-bulka">0</div>
-                <div class="result-card__item-label">Bulka Bags</div>
+                <div class="result-card__item-label">1 m³ bulk-bag equivalents</div>
               </div>
             </div>
             <div class="result-card__actions">
@@ -357,123 +310,37 @@
             </button>
             <div class="collapsible__content">
               <p><strong>Volume:</strong> Length × Width × Depth (converted to metres). For circles: π × radius² × depth. For triangles: ½ × base × height × depth.</p>
-              <p><strong>Weight:</strong> Volume × soil density. Topsoil has a density of 1.1 tonnes per cubic metre, while garden mix is lighter at 1.0 tonnes per cubic metre.</p>
-              <p><strong>Bags:</strong> Weight in tonnes × 50 (standard 20kg bags). We round up to ensure you have enough soil.</p>
-              <p><strong>Bulka Bags:</strong> Volume ÷ 1.0 (standard 1m³ bulka bag). Rounded up for ordering purposes.</p>
+              <p><strong>Weight:</strong> Volume × the selected indicative density. Confirm the exact product conversion with the supplier; see <a href="/methodology/">Methodology &amp; Sources</a>.</p>
+              <p><strong>20 kg equivalent:</strong> Estimated kilograms ÷ 20, rounded up. This is a mass comparison, not a retail pack count.</p>
+              <p><strong>1 m³ bulk-bag equivalent:</strong> Volume ÷ 1.0, rounded up. Confirm the supplier's actual bulk-bag size.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEO Content Section -->
+    <!-- Maintained calculator guidance -->
     <section class="content-section">
       <div class="container">
-        <h2>How to Calculate Soil for Your Garden</h2>
-        <p>Calculating the right amount of soil for your Australian garden project is crucial for healthy plant growth and avoiding waste. Whether you're creating new garden beds, preparing for turf, or filling raised beds, our soil calculator provides accurate measurements instantly.</p>
+        <h2>Calculate Soil Volume From Your Measurements</h2>
+        <p>Choose a shape, enter the measured dimensions and use the depth required by your project. LandscapeCalc converts the depth from millimetres and returns cubic metres without silently adding an allowance.</p>
 
-        <h3>Understanding Soil Measurements</h3>
-        <p>In Australia, soil is sold by the cubic metre (m³) or by weight (tonnes). Since soil is heavy, many suppliers price by the tonne. Our calculator provides both volume and weight measurements, making it easy to compare quotes and order the exact amount you need.</p>
+        <h3>Separate Areas With Different Depths</h3>
+        <p>If a project has shallow and deep sections, calculate them separately and add the cubic-metre results. This keeps the working visible and avoids using one average depth that hides important variation.</p>
 
-        <h3>Choosing the Right Soil Depth</h3>
-        <p>When top-dressing an existing lawn or levelling minor imperfections, 100mm of soil is usually sufficient to achieve a smooth, even surface. For new turf installations and areas with shallow-rooted plants, aim for 150mm of quality turf underlay to give grass roots the depth they need to establish properly. If you're building new garden beds, creating a vegetable patch, or planting anything with deep roots, you'll want at least 200mm of soil—and ideally more for serious vegetable production or fruit trees.</p>
+        <h3>Soil Type Affects Only the Secondary Weight</h3>
+        <p>Topsoil, garden mix, turf underlay and other products can have different bulk densities. The selected coefficient creates an indicative tonnes estimate; the cubic-metre volume remains based only on geometry. Moisture, organic content, screening and compaction can move the delivered weight materially.</p>
 
-        <h3>Types of Soil Available in Australia</h3>
-        <p>Topsoil at 1.1 tonnes per cubic metre is your basic screened natural soil, ideal for general filling, levelling work, and establishing lawns. It contains natural organic matter and is the most economical choice for large-scale projects where premium mixes aren't necessary. Garden mix at 1.0 tonnes per cubic metre is a step up—a premium blend of soil, compost, and organic matter that's ready for planting straight away and perfect for ornamental garden beds.</p>
-        <p>For vegetable gardens, veggie mix at 0.9 tonnes per cubic metre is specifically formulated with added nutrients and improved drainage that edible plants love. Turf underlay at 1.2 tonnes per cubic metre is engineered for new lawn installations, providing the optimal balance of drainage and water retention that grass needs to establish strong roots. Sandy loam at 1.3 tonnes per cubic metre drains exceptionally well, making it the go-to choice for native gardens and any plants that suffer in wet conditions. Finally, potting mix at just 0.6 tonnes per cubic metre is lightweight and designed exclusively for containers—never use it for in-ground planting as it will break down too quickly.</p>
-        <p>Clay soil at 1.5 tonnes per cubic metre is the heaviest option, used where water retention is desirable or for specific engineering applications.</p>
-
-        <h3>Tips for Using Soil</h3>
-        <p>For the best results with your soil project, start by preparing the area thoroughly—remove all weeds and loosen the existing soil so your new material can integrate properly. Always order 10-15% more volume than your calculations suggest to account for settling, especially when filling new beds or trenches. When spreading new soil, work it into the existing ground at the edges rather than creating a sharp boundary, as this prevents water from pooling at the junction. After spreading, water the area thoroughly to help particles settle into place and eliminate air pockets that could cause uneven sinking later.</p>
-
-        <h3>Soil Delivery Considerations</h3>
-        <p>Remember that soil is heavy—a single cubic metre weighs over a tonne, which has implications for both delivery access and how you'll move the material once it arrives. Check that delivery trucks can reach your property and plan where the soil will be tipped so you're not moving it further than necessary. For large orders, bulk delivery by the cubic metre is the most cost-effective option. For smaller jobs or properties with limited access where trucks can't reach, bagged soil or bulka bags that can be lifted by crane offer more practical alternatives.</p>
+        <h3>Use a Supplier Specification for Ordering</h3>
+        <p>Confirm the exact product, sale unit and conversion with the landscape yard. The calculator does not determine soil suitability, finished level, settlement or compaction. The <a href="/methodology/">Methodology &amp; Sources page</a> lists every coefficient and limitation.</p>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <h2 class="faq-section__title">Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How much topsoil do I need?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Calculate topsoil by multiplying length × width × depth (in metres). For a 10m × 5m area at 100mm depth: 10 × 5 × 0.1 = 5 cubic metres. Our calculator provides instant results and converts to tonnes based on soil type density.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How deep should topsoil be for a new lawn?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>For new lawns in Australia, apply 100-150mm of turf underlay soil. This provides adequate root depth for healthy grass establishment. Existing lawns being renovated may only need 50mm of additional soil to level and improve drainage.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              What's the difference between topsoil and garden mix?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Topsoil (1.1 tonnes per cubic metre) is screened natural soil ideal for filling and levelling. Garden mix (1.0 tonnes per cubic metre) is a blend of soil, compost, and organic matter designed for planting. Veggie mix (0.9 tonnes per cubic metre) is specifically formulated for vegetable gardens with added nutrients.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How many cubic metres of soil in a trailer?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>A standard 6x4 trailer holds approximately 0.5-0.7 cubic metres of soil when filled level (soil is heavier than mulch). A tandem trailer holds about 1-1.5 cubic metres. Always check your trailer's weight capacity as soil is dense - 1m³ weighs over 1 tonne.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question">
-              How do I convert cubic metres of soil to tonnes?
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-item__answer">
-              <p>Multiply volume by soil density. Topsoil has a density of approximately 1.1 tonnes per cubic metre, so 1m³ weighs about 1.1 tonnes (1100kg). Our calculator automatically converts between volume and weight for all soil types including garden mix and veggie mix.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Popular Calculations -->
-    <section class="popular-calculations">
-      <div class="container">
-        <h2 class="popular-calculations__title">Popular Soil Calculations</h2>
-        <p class="popular-calculations__desc">Quick answers for common soil projects:</p>
-        <div class="popular-grid">
-          <a href="/soil-calculator/10-square-metres/">Soil for 10 Square Metres</a>
-          <a href="/soil-calculator/20-square-metres/">Soil for 20 Square Metres</a>
-          <a href="/soil-calculator/garden-bed/">How Much Soil for a Garden Bed</a>
-          <a href="/soil-calculator/new-lawn/">Soil for a New Lawn</a>
-          <a href="/soil-calculator/raised-garden-bed/">Soil for a Raised Garden Bed</a>
-          <a href="/soil-calculator/top-dressing/">Soil for Top Dressing a Lawn</a>
-          <a href="/soil-calculator/veggie-patch/">How Much Soil for a Veggie Patch</a>
-          <a href="/soil-calculator/filling-a-hole/">How Much Soil to Fill a Hole</a>
-          <a href="/soil-calculator/4x2-garden-bed/">Soil for a 4×2 Raised Garden Bed</a>
-          <a href="/soil-calculator/cubic-metre-weight/">How Much Does a Cubic Metre of Soil Weigh?</a>
-        </div>
-      </div>
-    </section>
+    <section class="popular-calculations"><div class="container">
+      <h2 class="popular-calculations__title">Soil Weight Reference</h2>
+      <p class="popular-calculations__desc">See how the indicative conversion works for a one-cubic-metre starting volume.</p>
+      <div class="popular-grid"><a href="/soil-calculator/cubic-metre-weight/">Soil Weight per Cubic Metre</a><a href="/methodology/">Methodology &amp; Sources</a></div>
+    </div></section>
 
     <!-- Related Calculators -->
     <section class="related-section">
@@ -519,6 +386,8 @@
       </a>
       <nav class="footer__links" aria-label="Footer navigation">
         <a href="/about/">About</a>
+        <a href="/methodology/">Methodology &amp; Sources</a>
+        <a href="/contact/">Contact</a>
         <a href="/privacy/">Privacy</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a>
         <a href="/mulch-calculator/">Mulch</a>

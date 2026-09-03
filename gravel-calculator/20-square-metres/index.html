@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
   <title>Gravel for 20 Square Metres | LandscapeCalc</title>
   <meta name="description" content="Calculate gravel for 20 square metres. At 100mm depth, you'll need approximately 2 cubic metres of gravel. Free instant calculator for Australian projects.">
   <link rel="canonical" href="https://landscapecalc.com.au/gravel-calculator/20-square-metres/">
@@ -34,11 +35,6 @@
 
     gtag('config', 'G-MSK7HS9TW3');
   </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2538773959178920"
-    crossorigin="anonymous"></script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -130,7 +126,7 @@
             </div>
             <input type="number" id="depth" class="form-input" placeholder="Custom depth in mm" min="0" step="1">
             <span class="form-error">Please enter a valid depth</span>
-            <p class="form-hint" id="depth-hint">Recommended depth: 75-150mm for driveways</p>
+            <p class="form-hint" id="depth-hint">Editable presets only — confirm the required depth for your project</p>
           </div>
           <div class="btn-group">
             <button type="button" id="calculate-btn" class="btn btn--primary">Calculate</button>
@@ -140,8 +136,8 @@
             <div class="result-card__primary"><span class="result-card__value" id="result-volume">0.00</span><span class="result-card__unit">m³</span><p class="result-card__label">Total Volume</p></div>
             <div class="result-card__secondary">
               <div class="result-card__item"><div class="result-card__item-value" id="result-tonnes">0.00</div><div class="result-card__item-label">Estimated Weight (tonnes)</div></div>
-              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20kg Bags</div></div>
-              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">Bulka Bags</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bags">0</div><div class="result-card__item-label">20 kg equivalents</div></div>
+              <div class="result-card__item"><div class="result-card__item-value" id="result-bulka">0</div><div class="result-card__item-label">1 m³ bulk-bag equivalents</div></div>
             </div>
             <div class="result-card__actions">
               <button type="button" id="copy-btn" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy Result</button>
@@ -181,7 +177,7 @@
 
   <footer class="footer"><div class="container footer__inner">
     <a href="/" class="footer__logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24" height="24"><path d="M16 2C16 2 8 8 8 16C8 20 10 24 14 26C14 22 16 18 16 14C16 18 18 22 18 26C22 24 24 20 24 16C24 8 16 2 16 2Z" fill="currentColor"/><path d="M16 14C16 18 14 22 14 26C14 28 15 30 16 30C17 30 18 28 18 26C18 22 16 18 16 14Z" fill="currentColor" opacity="0.6"/></svg>LandscapeCalc</a>
-    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
+    <nav class="footer__links" aria-label="Footer navigation"><a href="/about/">About</a><a href="/methodology/">Methodology &amp; Sources</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScxyUrVePNMWdyJCDl1hrzjDwCQ-Joa4It31sBDZK63A17-kw/viewform?usp=pp_url&amp;entry.364081786=landscapecalc.com.au" target="_blank" rel="noopener noreferrer">Feedback</a><a href="/mulch-calculator/">Mulch</a><a href="/soil-calculator/">Soil</a><a href="/gravel-calculator/">Gravel</a><a href="/sand-calculator/">Sand</a><a href="/roadbase-calculator/">Road Base</a></nav>
     <p class="footer__copyright">&copy; <span id="copyrightYear"></span> LandscapeCalc.com.au</p>
   </div></footer>
   <script src="/js/calculator.js"></script>
