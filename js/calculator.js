@@ -96,6 +96,8 @@ let state = {
   material: 'mulch',
   subtype: 'wood-chip',
   shape: 'rectangle',
+  inputMode: 'dimensions',
+  volume: '',
   length: '',
   width: '',
   radius: '',
@@ -113,7 +115,11 @@ const elements = {};
 
 function initElements() {
   elements.materialTabs = document.querySelectorAll('.material-tab');
-  elements.shapeBtns = document.querySelectorAll('.shape-toggle__btn');
+  elements.shapeBtns = document.querySelectorAll('.shape-toggle__btn[data-shape]');
+  elements.inputModeBtns = document.querySelectorAll('[data-input-mode]');
+  elements.volumeInput = document.getElementById('volume');
+  elements.volumeInputs = document.getElementById('volume-inputs');
+  elements.dimensionInputs = document.getElementById('dimension-inputs');
   elements.subtypeSelect = document.getElementById('subtype');
   elements.depthInput = document.getElementById('depth');
   elements.depthChips = document.querySelectorAll('.depth-chip');
@@ -141,6 +147,7 @@ function initElements() {
   // Result elements
   elements.resultVolume = document.getElementById('result-volume');
   elements.resultTonnes = document.getElementById('result-tonnes');
+  elements.resultKg = document.getElementById('result-kg');
   elements.resultBags = document.getElementById('result-bags');
   elements.resultBulka = document.getElementById('result-bulka');
 
@@ -218,7 +225,9 @@ function performCalculation() {
 
   const depth = parseFloat(state.depth);
   const area = calculateArea(state.shape, dimensions);
-  const volume = calculateVolume(area, depth);
+  const volume = state.inputMode === 'volume'
+    ? parseFloat(state.volume)
+    : calculateVolume(area, depth);
   const weight = calculateWeight(volume, density);
   const bags = calculateBags(weight);
   const bulkaBags = calculateBulkaBags(volume);
@@ -237,19 +246,22 @@ function performCalculation() {
 
 function validateInput(input) {
   const value = parseFloat(input.value);
-  const isValid = !isNaN(value) && value > 0;
+  const isValid = Number.isFinite(value) && value > 0;
 
   if (input.value === '') {
     input.classList.remove('is-error');
+    input.removeAttribute('aria-invalid');
     return null; // Empty is not an error, just incomplete
   }
 
   if (!isValid) {
     input.classList.add('is-error');
+    input.setAttribute('aria-invalid', 'true');
     return false;
   }
 
   input.classList.remove('is-error');
+  input.removeAttribute('aria-invalid');
   return true;
 }
 
@@ -268,6 +280,7 @@ function validateAllInputs() {
 }
 
 function getRequiredInputs() {
+  if (state.inputMode === 'volume') return [elements.volumeInput].filter(Boolean);
   const inputs = [elements.depthInput];
 
   switch (state.shape) {
@@ -352,6 +365,16 @@ function updateShapeUI() {
   }
 }
 
+function updateInputModeUI() {
+  elements.inputModeBtns.forEach(btn => {
+    const active = btn.dataset.inputMode === state.inputMode;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  if (elements.volumeInputs) elements.volumeInputs.hidden = state.inputMode !== 'volume';
+  if (elements.dimensionInputs) elements.dimensionInputs.hidden = state.inputMode === 'volume';
+}
+
 function updateDepthChips() {
   if (!elements.depthChips) return;
 
@@ -371,6 +394,11 @@ function updateResultDisplay() {
   }
   if (elements.resultTonnes) {
     elements.resultTonnes.textContent = state.result.weight.toFixed(2);
+  }
+  if (elements.resultKg) {
+    elements.resultKg.textContent = (state.result.weight * 1000).toLocaleString('en-AU', {
+      maximumFractionDigits: 2
+    });
   }
   if (elements.resultBags) {
     elements.resultBags.textContent = state.result.bags;
@@ -426,14 +454,37 @@ function handleDepthPreset(depth) {
   hideResult();
 }
 
-function handleCalculate() {
+function trackCalculatorEvent(name, extra = {}) {
+  if (window.location.pathname.startsWith('/privacy/') || typeof window.gtag !== 'function') return;
+  try {
+    window.gtag('event', name, {
+      calculator_type: 'landscape',
+      material: state.material,
+      subtype: state.subtype,
+      input_mode: state.inputMode,
+      shape: state.inputMode === 'volume' ? 'volume' : state.shape,
+      page_location: window.location.origin + window.location.pathname,
+      ...extra
+    });
+  } catch (_) {
+    // Measurement must not interrupt the calculator.
+  }
+}
+
+function handleCalculate(track = false) {
   if (!validateAllInputs()) {
     hideResult();
     return;
   }
 
   state.result = performCalculation();
+  if (!Object.values(state.result).every(Number.isFinite)) {
+    hideResult();
+    showToast('These measurements are too large to calculate. Check your inputs.');
+    return;
+  }
   updateResultDisplay();
+  if (track === true) trackCalculatorEvent('calculator_complete');
 }
 
 function handleReset() {
@@ -443,6 +494,7 @@ function handleReset() {
   state.radius = '';
   state.base = '';
   state.height = '';
+  state.volume = '';
   state.depth = MATERIALS[state.material].defaultDepth;
   state.result = null;
 
@@ -452,13 +504,15 @@ function handleReset() {
     elements.widthInput,
     elements.radiusInput,
     elements.baseInput,
-    elements.heightInput
+    elements.heightInput,
+    elements.volumeInput
   ];
 
   inputs.forEach(input => {
     if (input) {
       input.value = '';
       input.classList.remove('is-error');
+      input.removeAttribute('aria-invalid');
     }
   });
 
@@ -487,6 +541,7 @@ Calculated at LandscapeCalc.com.au`;
 
   navigator.clipboard.writeText(text).then(() => {
     showButtonFeedback(elements.copyBtn, 'Copied!');
+    trackCalculatorEvent('calculator_copy');
   }).catch(() => {
     showToast('Failed to copy result');
   });
@@ -496,28 +551,33 @@ function handleShareLink() {
   const params = new URLSearchParams();
 
   params.set('m', state.material);
-  params.set('s', state.shape);
   params.set('st', state.subtype);
-  params.set('d', state.depth);
+  if (state.inputMode === 'volume') {
+    if (state.volume) params.set('v', state.volume);
+  } else {
+    params.set('s', state.shape);
+    params.set('d', state.depth);
 
-  switch (state.shape) {
-    case 'rectangle':
-      if (state.length) params.set('l', state.length);
-      if (state.width) params.set('w', state.width);
-      break;
-    case 'circle':
-      if (state.radius) params.set('r', state.radius);
-      break;
-    case 'triangle':
-      if (state.base) params.set('b', state.base);
-      if (state.height) params.set('h', state.height);
-      break;
+    switch (state.shape) {
+      case 'rectangle':
+        if (state.length) params.set('l', state.length);
+        if (state.width) params.set('w', state.width);
+        break;
+      case 'circle':
+        if (state.radius) params.set('r', state.radius);
+        break;
+      case 'triangle':
+        if (state.base) params.set('b', state.base);
+        if (state.height) params.set('h', state.height);
+        break;
+    }
+
   }
-
   const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
 
   navigator.clipboard.writeText(url).then(() => {
     showButtonFeedback(elements.shareBtn, 'Link Copied!');
+    trackCalculatorEvent('share', { method: 'copy_link', content_type: 'calculator' });
   }).catch(() => {
     showToast('Failed to copy link');
   });
@@ -539,6 +599,15 @@ function handleCollapsibleToggle() {
 
 function parseShareLink() {
   const params = new URLSearchParams(window.location.search);
+  if (elements.volumeInput) {
+    if (params.has('v')) {
+      state.inputMode = 'volume';
+      state.volume = params.get('v');
+    } else if (['s', 'l', 'w', 'r', 'b', 'h', 'd'].some(key => params.has(key))) {
+      // Existing dimension links retain their original calculation mode.
+      state.inputMode = 'dimensions';
+    }
+  }
 
   if (params.has('m') && MATERIALS[params.get('m')]) {
     state.material = params.get('m');
@@ -589,6 +658,7 @@ function applyParsedState() {
 
   // Apply shape
   updateShapeUI();
+  updateInputModeUI();
 
   // Apply depth
   if (elements.depthInput) {
@@ -614,6 +684,7 @@ function applyParsedState() {
   }
 
   // Auto-calculate if we have all required inputs
+  if (elements.volumeInput) elements.volumeInput.value = state.volume;
   if (validateAllInputs()) {
     handleCalculate();
   }
@@ -949,6 +1020,10 @@ function initFeedbackForm() {
 
 function initFromPagePreset() {
   const body = document.body.dataset;
+  if (elements.volumeInput && body.calculationMode === 'volume') {
+    state.inputMode = 'volume';
+    state.volume = body.volume || '';
+  }
 
   // Check for page-level material preset (set in HTML)
   if (body.material && MATERIALS[body.material]) {
@@ -993,10 +1068,11 @@ function initCopyrightYear() {
 
 function hasPagePresets() {
   const body = document.body.dataset;
-  return body.length || body.width || body.radius || body.base || body.height;
+  return body.volume || body.length || body.width || body.radius || body.base || body.height;
 }
 
 function applyPresetsToInputs() {
+  if (elements.volumeInput) elements.volumeInput.value = state.volume;
   // Apply dimension values to input fields
   if (elements.lengthInput && state.length) {
     elements.lengthInput.value = state.length;
@@ -1034,6 +1110,7 @@ function init() {
   // Set up initial UI
   updateMaterialUI();
   updateShapeUI();
+  updateInputModeUI();
   updateDepthChips();
 
   // Apply presets to input fields
@@ -1050,6 +1127,13 @@ function init() {
   }
 
   // Bind events
+  elements.inputModeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.inputMode = btn.dataset.inputMode;
+      updateInputModeUI();
+      hideResult();
+    });
+  });
   if (elements.materialTabs) {
     elements.materialTabs.forEach(tab => {
       tab.addEventListener('click', () => handleMaterialChange(tab.dataset.material));
@@ -1083,7 +1167,8 @@ function init() {
     { el: elements.radiusInput, key: 'radius' },
     { el: elements.baseInput, key: 'base' },
     { el: elements.heightInput, key: 'height' },
-    { el: elements.depthInput, key: 'depth' }
+    { el: elements.depthInput, key: 'depth' },
+    { el: elements.volumeInput, key: 'volume' }
   ];
 
   dimensionInputs.forEach(({ el, key }) => {
@@ -1100,7 +1185,7 @@ function init() {
   });
 
   if (elements.calculateBtn) {
-    elements.calculateBtn.addEventListener('click', handleCalculate);
+    elements.calculateBtn.addEventListener('click', () => handleCalculate(true));
   }
 
   if (elements.resetBtn) {
